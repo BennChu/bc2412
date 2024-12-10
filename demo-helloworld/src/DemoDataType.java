@@ -1,9 +1,10 @@
-public class Helloworld {
+public class DemoDataType {
   public static void main(String[] args){
     //comment. Welcome to bootcamp.
-    // Data type (Primitive)
+    // Data type (8 Primitive)
     // int (date type) -> integer
     // x, dayOfWeek -> variable
+
     int x =3;
     int dayOfWeek = 7;
     // int y = 3.3; // not ok, y is a variable that can store integer only
@@ -14,7 +15,13 @@ public class Helloworld {
     // variable java naming convension
     // caml case: dayOfWeek, y2
 
-    //re assignment
+    // Variable declaration
+    int x100;
+    // Value assignment
+    x100 = 9;
+
+
+    //re-assignment, x cannot be declared twice
     x = 101;       // re assign 101 to x
     x = x + 10;    // right 101+10, left: assign 111 to x
     x = x - 40;    // 111-40 = 71
@@ -68,7 +75,7 @@ public class Helloworld {
     System.out.println(x4); //1.5
 
 
-    int x5 = 3.0 / 2;
+    // int x5 = 3.0 / 2;
     // Step 1: 3.0 -> double value, 2 -> int
     // Step 2: double value / int value -> double value
     // Step 3: 3.0 / 2.0 -> 1.5
@@ -78,13 +85,67 @@ public class Helloworld {
     // int -> double
     // double -> int
 
+    // Store integer. Java: int, byte, short, long
+    int value = 1000000;
+    int value2 = 1_000_000;
+    int maxInteger = 2_100_000_000;
+
+    // int maxInteger = 2_147_483_648
+    // int minInteger = - 2_147_483_649
+
+    //byte -128 to 127
+    byte b1 = -128;
+    byte b2 = 127;
+
+    //short -32768 to 32767
+    short s1 = -32768;
+    short s2 = 32767;
 
 
+    //long 
+    // 2_147_483_648
+    //int value -> double type variable
+
+    //long l1 = 
+
+    // Declare a hardcode long value, you should always add "L"
+    //long l1 = 2147483648L; // "L" -> declare it is a long value
+
+    // float, double
+    double d1 = 10.2; // 10.2 -> double value
+    double d2 = 10.2d; // 10.2d -> double value
+    float f1 = 10.2f; // 10.2f -> float value
+    float f2 = 100000000000000.222f;
 
 
+    //conversion
+    float f4 = 10.2f;
+    double d3 = f4; // safe, assign float value to double variable
 
+    // float f5 = d3; // not safe
 
+    double d4 = 10.2f; // upcasting (float -> double)
 
+    double d5 = f4 + 10.2d;
+    // float + double -> double
+
+    double d6 = 0.2 + 0.1;
+    System.out.println(d6); //0.30000000000000000000004 double float cannot use for calculation
+
+    char c = 'x';
+    char c2 = '1';
+    char c3 = '!';
+    char c4 = ' '; // space
+    //char c5 = ''; // at least one character
+
+    // boolean
+    boolean b = true;
+    boolean b10 = false;
+
+    boolean isSmoker = false;
+    int age = 66;
+    boolean isElderly = age > 65; // "age.65" -> asking if age > 65
+    System.out.println(isElderly);
 
 
 
