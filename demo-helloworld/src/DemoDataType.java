@@ -121,6 +121,8 @@ public class DemoDataType {
     //conversion
     float f4 = 10.2f;
     double d3 = f4; // safe, assign float value to double variable
+    System.out.println("this is float value f4 " + f4);
+    System.out.println("this is d3 assign float value to double variable " + d3);
 
     // float f5 = d3; // not safe
 
@@ -137,6 +139,7 @@ public class DemoDataType {
     char c3 = '!';
     char c4 = ' '; // space
     //char c5 = ''; // at least one character
+    System.out.println("this is char c2 " + c2);
 
     // boolean
     boolean b = true;
@@ -146,6 +149,12 @@ public class DemoDataType {
     int age = 66;
     boolean isElderly = age > 65; // "age.65" -> asking if age > 65
     System.out.println(isElderly);
+
+
+    // all data types double > float > long > int > char > short > byte > boolean
+
+    boolean b8 = true;
+
 
 
 
