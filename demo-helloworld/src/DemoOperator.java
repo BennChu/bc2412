@@ -44,6 +44,10 @@ public class DemoOperator {
     int remainder = 10 % 3;
     System.out.println("remainder function % 10 / 3 is " + remainder); // should return 1
 
+    double remainder1 = 10.0 % 3.0;
+    System.out.println("double remainder " + remainder1);
+
+
 
     // ++x vs x++
     int a = 8;

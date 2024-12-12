@@ -15,7 +15,6 @@ public class DemoString {
 
     // + operation, String can add more letter
     password = password + "!";
-
     System.out.println(password); // abcd1234!
 
     // Java method (Instance method)
@@ -74,11 +73,29 @@ public class DemoString {
 
     // 'c' is char cannot .charAt(), primitive has no method (tool)
 
+    //isEmpty
+    s5 = "abc";
+    boolean isEmpty = s5.length() == 0;
+    System.out.println("is s5pty: " + s5.isEmpty()); // false
 
+    if(!s5.isEmpty()){
+
+
+    }
+
+
+    //substring
+    String substr = s5.substring(0,2); // return index of s5 index 0 till 2-1
+    System.out.println(substr); //should return a b
+    //s5 value doesnt change
+    // substr is storing a new string value returned by "substring"
+
+    System.out.println(s5.substring(0,s5.length()));
+    s5.substring(1);
 
 
 
     
-  }
+  }// end main
   
-}
+}// end class

@@ -91,6 +91,17 @@ public class DemoIf {
       // score between 70 and 79, grade C
       // under 70, grade F
 
+      //test cases
+      //1. M 90, A
+      //2. F 90, A
+      //3. M 86, B
+      //4. F 86, T
+      //5. M 85
+      //6. F 85
+      //7. M 79
+      //8. F 79
+      //9. M 69
+      //10.F 69
 
 
       if(gender == 'M'){
@@ -103,7 +114,10 @@ public class DemoIf {
         }else if (score >= 80 && score <= 86){
          grade = 'B';
          System.out.println("male " + grade);
-        }else {
+        }else if (score >=70 && score <=79){
+          grade = 'C';
+          System.out.println("male " + grade);
+        }else{
           grade ='F';
           System.out.println("male " + grade);
       }
@@ -122,9 +136,36 @@ public class DemoIf {
         System.out.println("female " + grade);
 
       }
-    
-
-  }
+    }
   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 }

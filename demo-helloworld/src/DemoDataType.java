@@ -137,9 +137,11 @@ public class DemoDataType {
     char c = 'x';
     char c2 = '1';
     char c3 = '!';
-    char c4 = ' '; // space
-    //char c5 = ''; // at least one character
+    char c4 = ' ';    // space ok
+                      //char c5 = ''; not ok at least one character
+    char c5 = 182;     // for unicode value, refers to symbols
     System.out.println("this is char c2 " + c2);
+    System.out.println("this is unicode = "+ c5);
 
     // boolean
     boolean b = true;
