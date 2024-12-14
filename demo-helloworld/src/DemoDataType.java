@@ -160,6 +160,51 @@ public class DemoDataType {
 
 
 
+    char q = 'a';
+    int u = q; // char value can be assigned to int, safe
+               // int 
+    System.out.println(u); // char 48 is '0'
+                           // char 65 is 'A'
+                           // char 97 is 'a'
+
+    char q2 = 97;
+    System.out.println(q2);
+
+    // ASCII code
+    char q3 = 48;
+    int u3 = q3;
+    System.out.println(q3 +" " + u3);
+
+    char q4 = 65;
+    System.out.println(q4);
+
+    char q5 = 10000;
+    System.out.println(q5);
+
+    char q6 = '你';
+    int u6 = q6;
+    System.out.println(u6); // 20320
+
+    char q7 = '好';
+    int u7 = q7;
+    System.out.println(u7);
+
+    // char q7 = 70000; // out of range of char value
+
+    // byte -> short -> int -> long -> float -> double
+    float f11 = 97;
+    double d11 = 97;
+    // char -> int -> long -> float -> double
+    long l10 = 'a';
+    float f10 = 'a';
+    double d10 = 'a';
+
+
+    
+
+
+
+
   }
 
 }

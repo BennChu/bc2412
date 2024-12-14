@@ -2,14 +2,15 @@ public class DemoString {
   public static void main(String[] args){
 
     char x = 'a';
-    x = 1;  //ok
+    x = 1;  // define a Char value by single quote '', cannot ' ' space
+            //ok 
             // char x = '1.1' cannot
             // char x = 'true' cannot
             // char x = 'x' ok
             // char x = '0' cannot
 
+
     // define a String value by double quote ""
-    // define a Char value by single quote ''
     String password = "abcd1234";
     String emailAddress = "abc@gmail.com";
 
@@ -20,11 +21,13 @@ public class DemoString {
     // Java method (Instance method)
     // action
 
+    // charAt(),  return char, inside bracket 要 (int)
     char result = password.charAt(0); // 0 represents the first position of the string value
     System.out.println(result);
 
     // index starts from 0 to lenght -1, index = lenght - 1
     System.out.println(password.charAt(8)); // return !
+
     // System.out.println(password.charAt(9)); // error
     // System.out.println(password.charAt(-1)); //error
 

@@ -198,6 +198,158 @@ public class DemoForLoop {
       //1. llo
 
 
+      // counting
+      // test case
+      // hello 有 l
+      // heieieiei  冇 l
+      // empty string 要有 ""
+
+
+      s = "Hello";  
+      int count = 0;
+
+      // for loop count how many 'l'
+      for( int i = 0; i < s.length() ; i++){ // loop all values + filtering, no break
+
+          if( s.charAt(i)=='l' ){         //s.charAt(i)=='l'    s.substring(i,i++).equals("l")
+
+            count++;
+
+          }
+      }
+      System.out.println("how many l is " + count);
+
+
+      // continue - skip the rest, go to next iteration i=1
+      count = 0;
+      for( int i=0 ; i<s.length(); i++){
+
+        if (s.charAt(i) != 'l'){
+
+          continue; // skip the rest count++, go back to for loop i++
+        }
+        count++;
+
+      }
+      System.out.println(count);
+
+
+
+      // 1 - 100, print all numbers, which can be divided by 3 and 4
+      // if ( i % 3 == 0 && i % 4 != 0    // event 1)
+      //      || i % 4 == 0 && i % 3 != 0 // event 2
+      //      || i % 3 != 0 && i % 4 != 0 // enent 3
+      // use continue
+      for ( int i=1 ; i < 101 ; i++ ){
+
+        if( i % 3 != 0 || i % 4 != 0 ){
+
+          continue;
+        }
+
+        System.out.print(i + " ");
+      }
+
+      System.out.println();
+
+
+
+      // nested loop
+      for( int i=0 ; i<3 ; i++){
+        for( int j=0 ; j<4 ; j++){
+
+          System.out.print("*");
+        }
+
+          System.out.println();
+      }
+
+      //Step 5: i = 1, j = 0, print *
+      //Step 6: i = 1, j = 1, print *
+      //Step 7: i = 1, j = 2, print *
+      //Step 8: i = 1, j = 3, print *
+      
+      //Step 9: i = 2, j = 0, print *
+      //Step 10: i = 2, j = 1, print *
+      //Step 11: i = 2, j = 2, print *
+      //Step 12: i = 2, j = 3, print *
+
+      //Step 13: i = 3, j = 0, print *
+      //Step 14: i = 3, j = 1, print *
+      //Step 15: i = 3, j = 2, print *
+      //Step 16: i = 3, j = 3, print *
+
+
+      // *                  // 每一行做唔同既事
+      // **
+      // ***
+      // ****
+      str = "*";
+      for(int i = 0; i < 4; i++){ // outer loop 做轉行
+
+          for( int j = 0 ; j < 4; j++ ){ // inner loop
+
+
+              System.out.println(str);
+              str = str + "*";
+              break;
+
+          }
+
+      }
+
+      int n = 6;
+      for(int i = 0; i < n; i++){ // outer loop 做轉行
+
+        for( int j = 0 ; j < i+1; j++ ){ // inner loop
+
+            System.out.print("*");
+            
+        }
+        System.out.println();
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      //         *
+      //        ***
+      //       *****
+      //      *******
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
