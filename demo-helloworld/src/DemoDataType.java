@@ -1,7 +1,14 @@
 public class DemoDataType {
   public static void main(String[] args){
     //comment. Welcome to bootcamp.
-    // Data type (8 Primitive)
+    // Data type has 8 Primitive -> double 64 bits default 0.0, cannot use for calculation
+                                  // float 32 bits 32bits IEEE of 754 float point default 0.0, cannot use for calculation
+                                  // long 64 bits (-2^63 to 2^63-1) default 0
+                                  // int 32 bits (-2,147,438,648 to 2,147,438,647) default 0
+                                  // char 16 bits (0 to 65535) default '\u0000'
+                                  // short 16 bits (-32768 to 32767) default 0
+                                  // byte 8 bits (-128 to 127) default 0
+                                  // boolean, 1 bit, true or false
     // int (date type) -> integer
     // x, dayOfWeek -> variable
 
@@ -9,14 +16,14 @@ public class DemoDataType {
     int dayOfWeek = 7;
     // int y = 3.3; // not ok, y is a variable that can store integer only
 
-    double y2 = 3.2;
-    // double 2w = 10.0; // not ok
-
+    double y2 = 3.2;  // double 2w = 10.0; naming variable 數字放頭唔得
+    
     // variable java naming convension
     // caml case: dayOfWeek, y2
 
     // Variable declaration
     int x100;
+    
     // Value assignment
     x100 = 9;
 
@@ -32,26 +39,25 @@ public class DemoDataType {
     System.out.println(x);
 
     x = x + 8 * 2 / 4 + 1; //
-
-    System.out.println(x); //6
+    System.out.println(x); // return 6, java support 先 * / 後 + -
 
     x = (x+2) * 2 / (3+1);
-
-    System.out.println(x); //4
+    System.out.println(x); //4, java support 先計 bracket
 
     x = ((x+3) / (6+1)) * (x+1);
     System.out.println(x); //5
 
 
-    //divide by 0
+    //除數要小心
+    //divide by 0, 係 undifined
     //int f = 10/0;
     //System.out.println(f);
 
-    // 0 /10
+    // 0/10, 係 0
     System.out.println(0/10); // 0
 
 
-    //divide
+    //divide, 除數既 steps
 
     int x2 = 3 / 2;
     // step 1: 3 -> int value, 2 -> int value
@@ -72,7 +78,10 @@ public class DemoDataType {
     // step 2: double value / int value -> double value
     // stpe 3: 3.0 / 2.0 -> 1.5
     // step 4: assign 1.5 (double value) to double type variable
-    System.out.println(x4); //1.5
+    System.out.println("this is 3.0/2 = " + x4); //1.5
+
+    double x5 = 3.00000 / 2.00000;
+    System.out.println("this is 3.00000 / 2.00000 = " + x5);
 
 
     // int x5 = 3.0 / 2;
@@ -113,18 +122,20 @@ public class DemoDataType {
 
     // float, double
     double d1 = 10.2; // 10.2 -> double value
-    double d2 = 10.2d; // 10.2d -> double value
-    float f1 = 10.2f; // 10.2f -> float value
-    float f2 = 100000000000000.222f;
+    double d2 = 10.2d; // 10.2d -> force the value to double value
+    float f1 = 10.2f; // 10.2f -> force the value to float value
+    float f2 = 12345.12345f;
 
+    System.out.println("this is float " + f2);
 
     //conversion
-    float f4 = 10.2f;
-    double d3 = f4; // safe, assign float value to double variable
+    float f4 = 12345.12345f;
     System.out.println("this is float value f4 " + f4);
-    System.out.println("this is d3 assign float value to double variable " + d3);
 
-    // float f5 = d3; // not safe
+    double d3 = f4; // assign float value to double variable, upcasting, it is safe to java, can do
+    System.out.println("assign float value f4 to double variable " + d3);
+
+    // float f5 = d3; // not safe, d3 is double, downcast
 
     double d4 = 10.2f; // upcasting (float -> double)
 
@@ -132,16 +143,16 @@ public class DemoDataType {
     // float + double -> double
 
     double d6 = 0.2 + 0.1;
-    System.out.println(d6); //0.30000000000000000000004 double float cannot use for calculation
+    System.out.println("0.2 + 0.1 = " + d6); //0.30000000000000000000004 double float cannot use for calculation
 
     char c = 'x';
     char c2 = '1';
     char c3 = '!';
     char c4 = ' ';    // space ok
                       //char c5 = ''; not ok at least one character
-    char c5 = 182;     // for unicode value, refers to symbols
+    char c5 = 48;     // for ascii value
     System.out.println("this is char c2 " + c2);
-    System.out.println("this is unicode = "+ c5);
+    System.out.println("this is ascii of c5 = "+ c5);
 
     // boolean
     boolean b = true;
@@ -167,13 +178,13 @@ public class DemoDataType {
                            // char 65 is 'A'
                            // char 97 is 'a'
 
-    char q2 = 97;
+    char q2 = 97; // assign no '', is ascii code
     System.out.println(q2);
 
     // ASCII code
     char q3 = 48;
     int u3 = q3;
-    System.out.println(q3 +" " + u3);
+    System.out.println("q3 = " + q3 + ", u3 = " + u3);
 
     char q4 = 65;
     System.out.println(q4);
