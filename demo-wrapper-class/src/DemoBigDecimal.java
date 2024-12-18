@@ -115,7 +115,7 @@ public class DemoBigDecimal {
       System.out.println(Math.sqrt(-10)); //NaN, undefined
 
 
-      //round(), nearest to integer
+      //round(), nearest to integer object is like tool box, 有工具
       double u = 3.456;
       System.out.println(Math.round(u));  //3
 

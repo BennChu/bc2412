@@ -181,19 +181,19 @@ public class DemoDataType {
     char q2 = 97; // assign no '', is ascii code
     System.out.println(q2);
 
-    // ASCII code
-    char q3 = 48;
-    int u3 = q3;
-    System.out.println("q3 = " + q3 + ", u3 = " + u3);
+    // ASCII code, char and int relationship
+    char q3 = 48;                                      //48 冇 '', 放 ascii 係 char, q3 = 0
+    int u3 = q3;                                       //放 char 係 int, u3 = 48
+    System.out.println("q3 = " + q3 + ", u3 = " + u3); // q3 = 0, u3 = 48
 
     char q4 = 65;
-    System.out.println(q4);
+    System.out.println(q4); //A, ascii code 65 is A
 
     char q5 = 10000;
     System.out.println(q5);
 
-    char q6 = '你';
-    int u6 = q6;
+    char q6 = '你';         // 放 '你' 係 char
+    int u6 = q6;            // char 轉 
     System.out.println(u6); // 20320
 
     char q7 = '好';

@@ -1,7 +1,7 @@
 public class DemoWrapperClass {
     public static void main(String[] args) {
 
-        // total 17 個 type ,  8 data type + wrapper class + string
+        // total 17 個 type ,  8 data type + 8 wrapper class + string
 
         int x = 3; // x is a primitive type variable
         Integer x2 = x; // auto-box , x2 係一個波, 係一個 object 就有功能, 第一個係大草就係 object
@@ -56,8 +56,11 @@ public class DemoWrapperClass {
         // float -> Float
 
 
-
-
+        //testing
+        System.out.println(Integer.max(3, 10));
+        String s = Integer.toString(898656521);
+        System.out.println(s + "hello world");
+        
 
 
 
