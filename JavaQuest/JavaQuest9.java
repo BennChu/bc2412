@@ -27,6 +27,8 @@ public class JavaQuest9 {
   public static void main(String[] args) {
     String str = "VenturenixLAB, Java";
 
+
+
     // prints J
     char target = 'J';
     for( int i = 0 ; i < str.length() ; i++ ){
@@ -35,6 +37,9 @@ public class JavaQuest9 {
         break;
       }
     }
+
+
+
 
     // prints e (the 1st e)
     target = 'e';
@@ -67,9 +72,10 @@ public class JavaQuest9 {
 
 
 
+
     // Use String replace() method
     // prints VenturenixLAB, Coding
-    // 厡本 str = VenturenixLAB, Java
+    // str = VenturenixLAB, Java
     System.out.println(str.replace("Java", "coding"));
     
 
@@ -91,10 +97,6 @@ public class JavaQuest9 {
 
 
 
-
-
-
-
     // print "VENTURENIXLAB, JAVA"
     // prints "venturenixlab, java"
     System.out.println(str.toUpperCase());
@@ -103,10 +105,10 @@ public class JavaQuest9 {
 
 
 
+
     // Method Chaining (one line to complete)
     // prints "V*NTUR*NIXLAB, JAVA!!!"
-    String s2 = "VENTURENIXLAB, JAVA";
-    System.out.println(chaining(s2));    
+    System.out.println(chaining("VENTURENIXLAB, JAVA"));
 
 
   }
