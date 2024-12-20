@@ -89,7 +89,7 @@ public class DemoMethod {
 
 
     //countEvenNumber method
-    public static countEven (int[] arr){ //short 就唔得
+    public static int countEven (int[] arr){ //short 就唔得
         int evenCount = 0;
 
         for( int i = 0 ; i < arr.length ; i++ ){
@@ -101,7 +101,7 @@ public class DemoMethod {
     }
 
 
-    public static countEven(long[] arr){
+    public static int countEven(long[] arr){
         int evenCount = 0;
 
         for( int i = 0 ; i < arr.length ; i++ ){
@@ -171,5 +171,6 @@ public class DemoMethod {
 
         System.out.println(countEven(new long[] {1L, 3L, 2L, 6L})); // 2
         System.out.println(countEven(new int[] {1, 3, 2, 6})); // 2
+        
     }
 }

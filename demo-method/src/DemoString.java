@@ -3,25 +3,27 @@ public class DemoString {
   public static void main(String[] args) {
 
 
+    //string 有好多工具, methods
+
     String s1 = "hello";
-    System.out.println(s1.length());// 
-    System.out.println(s1.charAt(1)); // e
-    System.out.println("Hello".equals(s1));// true
-    System.out.println(s1.contains("ll")); // true
-    System.out.println(s1.substring(0, 2)); // he, getting index 0 , 1
+    System.out.println(s1.length());                //5 
+    System.out.println(s1.charAt(1));               //e
+    System.out.println("Hello".equals(s1));         //true
+    System.out.println(s1.contains("ll"));          //true
+    System.out.println(s1.substring(0, 2));         //he, getting index 0 , 1
 
-    System.out.println(s1.contains("lll")); // false
-    System.out.println(s1.concat("!!!")); // Hello!!!
-    System.out.println(s1.startsWith("h")); // true
-    System.out.println(s1.startsWith("ha")); // false
-    System.out.println(s1.endsWith("lo")); // true
-    System.out.println(s1.endsWith("oo")); // false
-    System.out.println(s1.toUpperCase()); // HELLO
-    System.out.println("HELLO".toLowerCase()); // hello
+    System.out.println(s1.contains("lll"));         //false
+    System.out.println(s1.concat("!!!"));           //hello!!!
+    System.out.println(s1.startsWith("h"));         //true
+    System.out.println(s1.startsWith("ha"));        //false
+    System.out.println(s1.endsWith("lo"));          //true
+    System.out.println(s1.endsWith("oo"));          //false
+    System.out.println(s1.toUpperCase());           //HELLO
+    System.out.println("HELLO".toLowerCase());      //hello
 
 
-    System.out.println(s1.replace("ll", "xxx")); // hexxxo
-    System.out.println(s1.replace('l', 'm')); // hemmo
+    System.out.println("helollolllollllo".replace("ll", "xxx"));    //heloxxxoxxxloxxxxxxo
+    System.out.println(s1.replace('l', 'm'));       //hemmo, can replace all 'l'
     System.out.println(s1.equalsIgnoreCase("HeLLo")); // true
 
     // important use a lot

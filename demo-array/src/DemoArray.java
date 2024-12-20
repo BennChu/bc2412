@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class DemoArray {
     public static void main(String[] args) {
 
@@ -113,7 +115,7 @@ public class DemoArray {
         // find the max value in the int array
 
         // declare a variable for storing max value
-        int max = 0;    // 唔應該用0, 用 Integer.MIN_VALUE
+        int max = 0;    // 唔應該用0, 用 Integer.MIN_VALUE integer 最細既數
 
         // use for loop to compare each value in err5[] array to max value
         // array length 三間屋, length 係 3
@@ -147,7 +149,7 @@ public class DemoArray {
 
 
         arr6 = new int[] {300, 9, -8, -99, 400, -98, 100, 200};
-        max = arr6[0]; // int max = Integer.MIN_VALUE
+        max = arr6[0]; // int max = Integer.MIN_VALUE is better
 
         // use for loop to compare each value in an array to find max value
         for (int i = 0; i < arr6.length - 1; i++) {
@@ -193,7 +195,7 @@ public class DemoArray {
         }
 
 
-
+        // important
         // ****************************************************************************** */
         // array swap
         // move max value to the tail
@@ -247,9 +249,21 @@ public class DemoArray {
         s = String.valueOf(true);
         System.out.println(s);
 
-        Integer i1 = Integer.valueOf("123");
+        Integer i1 = Integer.valueOf("123"); //string turn value form
         System.out.println(i1);
 
+        //testing
+        x=0;
+        int y=0;
+
+        y = 0 + Integer.valueOf("1");
+
+
+
+
+
+
+        //做大工程, swap
         // Integer i2 = Integer.valueOf("h") // cannot, h is char cannot assign to Integer
 
         // "Hello" -> 'h' 'e' 'l' 'l' 'o'
@@ -358,5 +372,31 @@ public class DemoArray {
         // System.out.println(arr14[0]);
 
 
+        //sorting, without create a new array
+        //20, -20, 90, 50
+        //move the max value to tail
+        //bubble sort, 有java method
+        int[] arr20 = new int[] {20, -20, 90, 50, -40};
+
+        temp = 0;  
+
+            for (int i = 0; i < arr20.length-1; i++) { 
+            
+                //arr20 length is 5, 做 4次 sorting, 下面有 j+1, 要 =4, 所以 j=3 就要停
+                //i = 0; j = 0, 1, 2, 3
+                //i = 3; j = 0
+                for( int j = 0 ; j < arr20.length-1-i ; j++ ){ 
+
+                    if (arr20[j] > arr20[j + 1]) {
+                    temp = arr20[j];
+                    arr20[j] = arr20[j + 1];
+                    arr20[j + 1] = temp;
+                    }
+        
+    
+                }
+    
+            }
+            System.out.println(Arrays.toString(arr20)); //print array
     }
 }

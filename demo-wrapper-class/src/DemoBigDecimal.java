@@ -5,7 +5,8 @@ public class DemoBigDecimal {
 
     public static void main(String[] args){
 
-
+      // double + doubld
+      // 0.2 + 0.1 is not 0.3, is 0.3000000000000000000000004
       double result = 0.2 + 0.1;
       System.out.println(result); // 0.30000000000000000000000004
 
@@ -16,12 +17,12 @@ public class DemoBigDecimal {
       }
 
 
-      // Solution BigDecimal
-      BigDecimal bd1 = BigDecimal.valueOf(0.2); // 個波
+      //Solution is use BigDecimal, 有一個工具
+      BigDecimal bd1 = BigDecimal.valueOf(0.2); // 係一個波, 有工具
       BigDecimal bd2 = BigDecimal.valueOf(0.1);
       BigDecimal bd3 = bd1.add(bd2);
       
-      System.out.println(bd3.doubleValue()); // 0.3
+      System.out.println("bd3 = " + bd3.doubleValue()); // 0.3
 
       BigDecimal bd4 = BigDecimal.valueOf(0.3);
       BigDecimal bd5 = BigDecimal.valueOf(0.1);
@@ -29,11 +30,11 @@ public class DemoBigDecimal {
 
 
       //subtract
-      System.out.println(bd6.doubleValue());
+      System.out.println("bd6 = " + bd6.doubleValue());
 
       //multiply
-      System.out.println(0.1 * 0.2); // 0.02000000000000004
-      System.out.println( bd2.multiply(bd1));
+      System.out.println("0.1*0.2 = " + 0.1 * 0.2); // 0.02000000000000004
+      System.out.println( "bd2.multiply(bd1) = " + bd2.multiply(bd1));
 
 
       // divide
@@ -69,7 +70,7 @@ public class DemoBigDecimal {
       double length = 4.2;
 
       BigDecimal bd19 = BigDecimal.valueOf(length);
-      System.out.println(bd19.multiply(bd19));
+      System.out.println("multiply " + bd19.multiply(bd19));
 
       double squareArea = BigDecimal.valueOf(length)
                     .multiply(BigDecimal.valueOf(length))
@@ -86,7 +87,7 @@ public class DemoBigDecimal {
                         .multiply(BigDecimal.valueOf(radius))
                         .multiply(BigDecimal.valueOf(radius))
                         .doubleValue();
-      System.out.println(circleArea);
+      System.out.println("circle area " + circleArea);
 
       circleArea = BigDecimal.valueOf(Math.pow(radius, 2.0))  //this is power function
                 .multiply(BigDecimal.valueOf(Math.PI))        // pi value

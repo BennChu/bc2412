@@ -83,7 +83,7 @@ public class DemoWhileLoop {
 
     System.out.println(Arrays.toString(marksixArr));
 
-
+    //use while loop when 唔知幾時完
     //1-100
     //bomb - 47
     //User: 4, please pick a number between 5 - 100
@@ -103,7 +103,7 @@ public class DemoWhileLoop {
     //input = scanner.nextInt();
 
     //While(........)
-    // 
+    //use while loop when 唔知幾時完
 
 
 
