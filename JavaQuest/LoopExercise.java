@@ -1,26 +1,32 @@
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.Arrays;
 import java.util.function.BiFunction;
 
 public class LoopExercise {
+
   public static void main(String[] args) {
     // 1. Print 6 times hello
     // Use: for loop
     System.out.println("1. Print 6 times hello");
-    for( int i = 0 ; i < 6 ; i++ ){
-      System.out.println("hello");
+    for(int i = 0 ; i < 6 ; i++) {
+      System.out.println("Hello");
     }
-
+    //for new line
+    System.out.println();
 
 
     // 2. Expected output: "0,1,2,3,4"
     // Use: for loop
-    System.out.println();
     System.out.println("2. Expected output: 0,1,2,3,4");
-    for( int i = 0 ; i < 5 ; i++ ){
-      System.out.print(i + ",");
+    for( int i = 0 ; i < 5 ; i++ ) {
+        if(i != 4)
+          System.out.print(i + ",");
+        else
+          System.out.print(i);
     }
-    System.out.println(); //for new line
+    //for new line
+    System.out.println(); 
 
 
 
@@ -28,7 +34,7 @@ public class LoopExercise {
     // Use: for loop + if
     System.out.println();
     System.out.println("3. Print even numbers between 2 and 20");
-    for( int i = 2 ; i < 21 ; i++ ){
+    for( int i = 2 ; i < 21 ; i++ ) {
         if(i % 2 == 0){
           System.out.println(i);
         }
@@ -46,9 +52,9 @@ public class LoopExercise {
     // Use: for loop + if
     System.out.println();
     System.out.println("4. Print the numbers, which can be divided by 3 or 5");
-    for( int i = 2 ; i < 21 ; i++ ){
+    for( int i = 2 ; i < 21 ; i++ ) {
 
-        if(i % 3 == 0 || i % 5 == 0){
+        if(i % 3 == 0 || i % 5 == 0) {
           System.out.println(i);
         }
     }
@@ -85,14 +91,16 @@ public class LoopExercise {
     // Use: for loop + if
     System.out.println();
     System.out.println("6. sum up all odd numbers and even numbers between 0 - 10 and find the product of them");
+    //int default is 0
     int odd = 0;
     int even = 0;
-    for( int i = 0 ; i < 11 ; i++ ){
-      if( i % 2 == 0){
+    for( int i = 0 ; i < 11 ; i++ ) {
+      if( i % 2 == 0) {
         even = even + i;
       }else
         odd = odd + i;
     }
+    //int * int, no need BigDecimal
     System.out.println(even * odd);
 
 
@@ -107,9 +115,10 @@ public class LoopExercise {
     System.out.println();
     System.out.println("7. Check if 'd' exists in the string.");
     String str7 = "ijkabcpodi";
+    //boolean default is false
     boolean find = false;
 
-    for( int i = 0 ; i < str7.length() ; i ++ ){
+    for( int i = 0 ; i < str7.length() ; i ++ ) {
         if( 'd' == str7.charAt(i)){
           find = true;
           break;
@@ -145,9 +154,10 @@ public class LoopExercise {
     System.out.println("8. Check if the string s8b is a substring of s8a");
 
     //for testing System.out.print(s8a.substring(0));
-
-    for( int i = 0 ; i < s8a.length() - s8b.length() +1 ; i++ ){
-        if(s8a.substring(i, i + s8b.length()).equals(s8b)){
+    for( int i = 0 ; i < s8a.length() - s8b.length() +1 ; i++ ) {
+        //string 要用 equals
+        //i 係 beginning index, s8b.length() 係 ending index
+        if(s8a.substring(i, i + s8b.length()).equals(s8b)) {
         found = true;
         break;
         }
@@ -168,12 +178,12 @@ public class LoopExercise {
     // Use: for loop + if
     String s9 = "pampers";
     char c9 = 'p';
+    int count = 0;
 
     System.out.println();
-    System.out.println("Count the number of char value in the given String s9");
+    System.out.println("9. Count the number of char value in the given String s9");
 
-    int count = 0;
-    for( int i = 0 ; i < s9.length() ; i++ ){
+    for( int i = 0 ; i < s9.length() ; i++ ) {
         if( c9 == s9.charAt(i)){
           count++;
         }
@@ -194,7 +204,10 @@ public class LoopExercise {
 
     // testing System.out.println( "akc".replace( 'k', 'x'));
     
-    for( int i = 0 ; i < arr10.length ; i++ ){
+    for( int i = 0 ; i < arr10.length ; i++ ) {
+         
+         //string has a method replace, it returns a string
+         //replace x oldChar with k newChar
          System.out.println( arr10[i].replace('x', 'k') );
 
     }
@@ -214,14 +227,17 @@ public class LoopExercise {
     System.out.println();
     System.out.println("11. Count the number of Uppercase char value in the given string s11");
 
-    
+    //char int relationship
     int asciiA = 'A';
     int asciiZ = 'Z';
     count = 0;
 
     // System.out.print(Integer.valueOf(s11.charAt(0)));
     // System.out.print(asciiA);
-    for( int i = 0 ; i < s11.length() ; i++ ){
+    for( int i = 0 ; i < s11.length() ; i++ ) {
+
+        //uppercase should between A <= i <= Z
+        //Integer class has a method valueOf
         if( Integer.valueOf(s11.charAt(i)) >= asciiA && Integer.valueOf(s11.charAt(i)) <= asciiZ )
           count++;
     }
@@ -243,8 +259,11 @@ public class LoopExercise {
     System.out.println();
     System.out.println("12. Print the following pattern of * value");
 
-    for( int i = 0 ; i < 3 ; i++ ){
-      for( int j = 0 ; j < 5 ; j++ ){
+    int numOfRow = 3;
+    int numOfStar = 5;
+
+    for( int i = 0 ; i < numOfRow ; i++ ) {
+      for( int j = 0 ; j < numOfStar ; j++ ) {
         System.out.print("*");
       }
     System.out.println();
@@ -272,17 +291,17 @@ public class LoopExercise {
 
     int x = 0;
     int score = 0;
-    for( int i = 0 ; i < s13.length() ; i++ ){
-        if( s13.charAt(i) == 'l' ){
+    for( int i = 0 ; i < s13.length() ; i++ ) {
+        if( s13.charAt(i) == 'l' ) {
           x = 1;
           //System.out.println('l');
-        }else if( s13.charAt(i) == 'd' ){
+        }else if( s13.charAt(i) == 'd' ) {
           x = 2;
           //System.out.println('d');
-        }else if( s13.charAt(i) == 'r' ){
+        }else if( s13.charAt(i) == 'r' ) {
           x = 3;
           //System.out.println('r');
-        }else if( s13.charAt(i) == 'u' ){
+        }else if( s13.charAt(i) == 'u' ) {
           x = 4;
           //System.out.println('u');
         }else{
@@ -343,11 +362,11 @@ public class LoopExercise {
     //find the max and min
     long max1 = Integer.MIN_VALUE;
     long min = Integer.MAX_VALUE;
-    for( int i = 0 ; i < arr14.length ; i++ ){
+    for( int i = 0 ; i < arr14.length ; i++ ) {
         if( arr14[i] > max1 ){
             max1 = arr14[i];
         }else if(arr14[i] < min){
-          min = arr14[i];
+            min = arr14[i];
         }
     }
     System.out.println("the max is = " + max1 );
@@ -385,24 +404,52 @@ public class LoopExercise {
     System.out.println();
     System.out.println("17. Add value 0.1 to each of value in array arr16");
 
-    double temp1;
+    //double temp1;
     double[] temp11 = new double[arr16.length];
-    BigDecimal bd1;
-    BigDecimal bd2 = BigDecimal.valueOf(0.1f);
-    BigDecimal bd3;
+    //BigDecimal bd1;
+    //BigDecimal bd2 = BigDecimal.valueOf(0.1);
+    //BigDecimal bd3;
 
     //System.out.println("before for loop arr16(2) " + arr16[2]);
 
     for( int i = 0 ; i < arr16.length ; i++ ){
         
-          temp1 = arr16[i];
-          bd1 = BigDecimal.valueOf(temp1);
-          bd3 = bd1.add(bd2);
-          temp11[i] = bd3.doubleValue();
+          //temp1 = arr16[i];
+          //bd1 = BigDecimal.valueOf(temp1);
+          //bd3 = bd1.add(bd2);
+          //temp11[i] = bd3.doubleValue();
+          //temp11[i] = bd1 + bd2
+          temp11[i] = BigDecimal.valueOf((double)arr16[i])
+                                // .setScale(1,RoundingMode.HALF_DOWN)
+                                // .add(BigDecimal.valueOf(0.1))
+                                .doubleValue();
 
     }
+    //return a string of the content of the array
     System.out.println(Arrays.toString(temp11));
 
+    // double temp2 = arr16[2];
+    // BigDecimal bd4 = BigDecimal.valueOf(0.1);
+    // BigDecimal bd5 = BigDecimal.valueOf(temp2);
+    // BigDecimal bd6 = bd5.add(bd4);
+    // temp1 = bd6.doubleValue();
+    // System.out.println(temp1);
+
+
+    // BigDecimal[] updateArr = new BigDecimal[arr16.length];
+
+    // BigDecimal increment = new BigDecimal("0.1");
+
+    // for( int i = 0 ; i < arr16.length ; i++ ){
+
+    //     BigDecimal value = new BigDecimal(Float.toString(arr16[i]));
+    //     updateArr[i] = value.add(increment);
+    // }
+
+    // for( int i = 0 ; i < updateArr.length ; i++ ){
+
+    //     System.out.println
+    // }
 
 
 
@@ -452,7 +499,7 @@ public class LoopExercise {
     System.out.println("19. swap the max digit and min digit");
 
     char[] arr19 = new char[s19.length()];
-    for( int i = 0 ; i < s19.length() ; i++ ){
+    for( int i = 0 ; i < s19.length() ; i++ ) {
         arr19[i] = s19.charAt(i);
     }
 

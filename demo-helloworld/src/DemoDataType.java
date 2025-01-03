@@ -14,32 +14,31 @@ public class DemoDataType {
 
     int x =3;
     int dayOfWeek = 7;
-    // int y = 3.3; // not ok, y is a variable that can store integer only
+    //int y = 3.3; not ok, y is a variable that can store integer only, 3.3 is float or double
 
-    double y2 = 3.2;  // double 2w = 10.0; naming variable 數字放頭唔得
+    double y2 = 3.2;  // double 2w = 10.0; naming variable 數字唔可以放頭
     
-    // variable java naming convension
-    // caml case: dayOfWeek, y2
+    //variable java naming convension
+    //caml case: dayOfWeek, y2
 
-    // Variable declaration
+    //Variable declaration
     int x100;
     
-    // Value assignment
+    //Value assignment
     x100 = 9;
 
 
     //re-assignment, x cannot be declared twice
-    x = 101;       // re assign 101 to x
-    x = x + 10;    // right 101+10, left: assign 111 to x
-    x = x - 40;    // 111-40 = 71
-    x = x * 3;     // 71 * 3 = 213
-    x = x / 213;   // 213/213
+    x = 101;       //re assign 101 to x
+    x = x + 10;    //right 101+10, left: assign 111 to x
+    x = x - 40;    //111-40 = 71
+    x = x * 3;     //71 * 3 = 213
+    x = x / 213;   //213/213
 
-    // print out
-    System.out.println(x);
+    System.out.println(x);  //1
 
-    x = x + 8 * 2 / 4 + 1; //
-    System.out.println(x); // return 6, java support 先 * / 後 + -
+    x = x + 8 * 2 / 4 + 1;
+    System.out.println(x);  //6, java support 先 * / 後 + -
 
     x = (x+2) * 2 / (3+1);
     System.out.println(x); //4, java support 先計 bracket
@@ -54,53 +53,61 @@ public class DemoDataType {
     //System.out.println(f);
 
     // 0/10, 係 0
-    System.out.println(0/10); // 0
+    System.out.println(0/10); //0
 
 
     //divide, 除數既 steps
 
     int x2 = 3 / 2;
-    // step 1: 3 -> int value, 2 -> int value
-    // step 2: int value / int value -> int value
-    // stpe 3: 3 / 2 -> 1
-    // step 4: assign 1 (int value) to int type variable (ok)
+    //step 1: 3 -> int value, 2 -> int value
+    //step 2: int value / int value -> int value
+    //stpe 3: 3 / 2 -> 1
+    //step 4: assign 1 (int value) to int type variable (ok)
     System.out.println(x2); //1
 
     double x3 = 3/2;
-    // step 1: 3 -> int value, 2 -> int value
-    // step 2: int value / int value -> int value
-    // stpe 3: 3 / 2 -> 1
-    // step 4: assign 1 (int value) to double type variable (convert 1 to 1.0)
+    //step 1: 3 -> int value, 2 -> int value
+    //step 2: int value / int value -> int value
+    //stpe 3: 3 / 2 -> 1
+    //step 4: assign 1 (int value) to double type variable (convert 1 to 1.0)
     System.out.println(x3); //1.0
 
     double x4 = 3.0 / 2;
-    // step 1: 3.0 -> double value, 2 -> int value
-    // step 2: double value / int value -> double value
-    // stpe 3: 3.0 / 2.0 -> 1.5
-    // step 4: assign 1.5 (double value) to double type variable
+    //step 1: 3.0 -> double value, 2 -> int value
+    //step 2: double value / int value -> double value
+    //stpe 3: 3.0 / 2.0 -> 1.5
+    //step 4: assign 1.5 (double value) to double type variable
     System.out.println("this is 3.0/2 = " + x4); //1.5
 
     double x5 = 3.00000 / 2.00000;
-    System.out.println("this is 3.00000 / 2.00000 = " + x5);
+    System.out.println("this is 3.00000 / 2.00000 = " + x5); //1.5
 
 
-    // int x5 = 3.0 / 2;
-    // Step 1: 3.0 -> double value, 2 -> int
-    // Step 2: double value / int value -> double value
-    // Step 3: 3.0 / 2.0 -> 1.5
-    // Step 4: assign 1.5 (double value) to int type variable (downcasting)
-    // ! not allow assign a higher level value to a lower level type of variable
+    //int x5 = 3.0 / 2;
+    //Step 1: 3.0 -> double value, 2 -> int
+    //Step 2: double value / int value -> double value
+    //Step 3: 3.0 / 2.0 -> 1.5
+    //Step 4: assign 1.5 (double value) to int type variable (downcasting)
+    //not allow assign a higher level value to a lower level type of variable
 
-    // int -> double
-    // double -> int
+    //int -> double, int 可以 assign to double
+    //double -> int, double 唔可以 assign to int
 
-    // Store integer. Java: int, byte, short, long
+    //Store integer. Java: int, byte, short, long
     int value = 1000000;
-    int value2 = 1_000_000;
+    int value2 = 1_000_000; //可以寫 _ 係 int type
+    int value3 = 1_00_00_00;
     int maxInteger = 2_100_000_000;
+    double value4 = 1_000_000;
 
-    // int maxInteger = 2_147_483_648
-    // int minInteger = - 2_147_483_649
+    System.out.println(value);
+    System.out.println(value2);
+    System.out.println(value3); //1000000
+    System.out.println(value4); //1000000.0
+    System.out.println(maxInteger); //2100000000
+
+    //int maxInteger = 2_147_483_648
+    //int minInteger = - 2_147_483_649
 
     //byte -128 to 127
     byte b1 = -128;
@@ -109,7 +116,6 @@ public class DemoDataType {
     //short -32768 to 32767
     short s1 = -32768;
     short s2 = 32767;
-
 
     //long 
     // 2_147_483_648
@@ -126,7 +132,9 @@ public class DemoDataType {
     float f1 = 10.2f; // 10.2f -> force the value to float value
     float f2 = 12345.12345f;
 
-    System.out.println("this is float " + f2);
+    System.out.println("float " + f2);
+    System.out.println("d1 " + d1); //10.2
+    System.out.println("d2 " + d2); //10.2
 
     //conversion
     float f4 = 12345.12345f;

@@ -5,7 +5,7 @@ public class DemoBigDecimal {
 
     public static void main(String[] args){
 
-      // double + doubld
+      // double + doubld, 加數有問題, cannot add
       // 0.2 + 0.1 is not 0.3, is 0.3000000000000000000000004
       double result = 0.2 + 0.1;
       System.out.println(result); // 0.30000000000000000000000004
@@ -17,27 +17,33 @@ public class DemoBigDecimal {
       }
 
 
-      //Solution is use BigDecimal, 有一個工具
+      //Solution is use BigDecimal, BigDecimal 係一個 type object 佢有工具
       BigDecimal bd1 = BigDecimal.valueOf(0.2); // 係一個波, 有工具
       BigDecimal bd2 = BigDecimal.valueOf(0.1);
       BigDecimal bd3 = bd1.add(bd2);
       
+      //有工具, doubleValue(), 由 BigDecimal type change to double type
       System.out.println("bd3 = " + bd3.doubleValue()); // 0.3
+      //rewrite
+      System.out.println("bd3" + BigDecimal.valueOf(0.2).add(BigDecimal.valueOf(0.1)).doubleValue());
 
+      //subtract
       BigDecimal bd4 = BigDecimal.valueOf(0.3);
       BigDecimal bd5 = BigDecimal.valueOf(0.1);
       BigDecimal bd6 = bd4.subtract(bd5);
 
-
       //subtract
       System.out.println("bd6 = " + bd6.doubleValue());
+      //re write
+      System.out.println("subtract" + BigDecimal.valueOf(0.3).subtract(BigDecimal.valueOf(0.1)).doubleValue());
 
       //multiply
       System.out.println("0.1*0.2 = " + 0.1 * 0.2); // 0.02000000000000004
       System.out.println( "bd2.multiply(bd1) = " + bd2.multiply(bd1));
 
 
-      // divide
+      //divide has problem
+      //maybe x/0 = undefined , 0/x = 0 , 10/3 = 3.333333333333333333333333333333333
       System.out.println(0.3/0.1); // 2.999999999999999999996
       BigDecimal bd10 = BigDecimal.valueOf(0.3);
       BigDecimal bd11 = BigDecimal.valueOf(0.1);
@@ -50,7 +56,7 @@ public class DemoBigDecimal {
       BigDecimal bd15 = bd13.divide(bd14, BigDecimal.ROUND_DOWN);
       System.out.println(bd15.doubleValue()); // 3.0 non
 
-
+      //用 + - * 可以用 setScale RoundingMode 工具
       BigDecimal bd16 = BigDecimal.valueOf(4.565).setScale(2, RoundingMode.HALF_DOWN);
       System.out.println(bd16.doubleValue()); // 4.56 五捨六入
 

@@ -10,22 +10,26 @@ public class DemoArray {
         int x2 = 10;
         int x3 = 11;
 
-        // declare int array, array 名係 ar,  new int [], define 左三間屋 [3], arr 係array 個名
+        //declare int array new int[], variable is arr
+        //define 左三間屋[3], arr 係array 個 variable store reference address
         int[] arr = new int[3];
 
-        // assign value to array
-        arr[0] = 3;     // 用 [], 開始 index is 0 not 1 但係 define 時係 3, 3間屋
+        //assign value to array
+        //用 [], index 開始係 0 not 1, 長度係係 3, 3間屋
+        //arr[0] also is an address
+        arr[0] = 3;     
         arr[1] = 10;
         arr[2] = 11;
 
-        // for loop to read array values, array length 係冇 (), 長度係 3
-        for (int i = 0; i < arr.length; i++) {  // i = 0 , 1 , 2
+        //for loop to read array values, array length 係冇 (), 長度係 3
+        // i = 0 , 1 , 2
+        for (int i = 0; i < arr.length; i++) {  
 
             System.out.println(arr[i]);
         }
 
 
-        // example, use array, print all values, which >= 10
+        //example, use array, print all values, which >= 10
         for (int i = 0; i < arr.length; i++) {
 
             if (arr[i] >= 10) {
@@ -37,9 +41,9 @@ public class DemoArray {
 
 
 
-        // declare double array, length = 5
-        // assign values -> 10.4, 4.3, 3.3, 1.9, 9.9
-        // sum up all values in the double array
+        //declare double array, length = 5
+        //assign values -> 10.4, 4.3, 3.3, 1.9, 9.9
+        //sum up all values in the double array
 
         // Step 1: declare double array
         double[] arr2 = new double[5];
@@ -105,17 +109,18 @@ public class DemoArray {
         // use for loop to convert value and assign them to int array
         // 好多時 for loop 都用 i, j, k 所以出面唔用 i j k
         for (int i = 0; i < arr4.length; i++) {
-            arr5[i] = arr4[i]; // char value -> int variable (upcasting)
+            //char value -> int variable (upcasting)
+            arr5[i] = arr4[i]; 
             System.out.println(arr5[i]);
         }
 
 
 
-// *************************************************************************************** */
         // find the max value in the int array
 
         // declare a variable for storing max value
-        int max = 0;    // 唔應該用0, 用 Integer.MIN_VALUE integer 最細既數
+        //唔應該用0, 用 Integer.MIN_VALUE, integer 最細既數
+        int max = 0;    
 
         // use for loop to compare each value in err5[] array to max value
         // array length 三間屋, length 係 3
@@ -128,18 +133,18 @@ public class DemoArray {
         }
         System.out.println("the max value in array is " + max);
 
-        // test cases
-        //
 
 
-
-        // ****************************************************************************************** */
+        // **************************** */
         // find the min value in the array
 
         int[] arr6 = new int[] {-100, 9, -8, -200, -99, -98, -300};
-        int min = arr6[0]; // int min = Integer.MAX_VALUE; int max value
+        
+        //int min = Integer.MAX_VALUE; int max value
+        //find min value, 所以一開始搵最大比較去搵細
+        int min = arr6[0]; 
 
-        // use for loop to compare each value in an array to find min value
+        //use for loop to compare each value in an array to find min value
         for (int i = 0; i < arr6.length - 1; i++) {
             if (arr6[i + 1] <= min) {
                 min = arr6[i + 1];
@@ -149,9 +154,12 @@ public class DemoArray {
 
 
         arr6 = new int[] {300, 9, -8, -99, 400, -98, 100, 200};
-        max = arr6[0]; // int max = Integer.MIN_VALUE is better
 
-        // use for loop to compare each value in an array to find max value
+        //int max = Integer.MIN_VALUE is better
+        //搵最大, 一開始用最細去做比較
+        max = arr6[0]; 
+
+        //use for loop to compare each value in an array to find max value
         for (int i = 0; i < arr6.length - 1; i++) {
             if (max <= arr6[i + 1]) {
                 max = arr6[i + 1];
@@ -170,7 +178,7 @@ public class DemoArray {
 
         System.out.println(sum);
 
-        // swap
+        //swap
         int left = 7;
         int right = 9;
 
@@ -181,7 +189,7 @@ public class DemoArray {
         System.out.println("left" + left + "," + "right" + right);
 
 
-        // array
+        //array
         int[] arr8 = new int[] {9, -8, 109, 99, 98};
 
         // print 1 (9 + -8)
@@ -190,19 +198,21 @@ public class DemoArray {
         // print (98 + 99)
         int sum1 = 0; // for temp storing
         for (int i = 0; i < arr8.length - 1; i++) {
-            sum1 = arr8[i] + arr8[i + 1]; // arr8[arr8.length]
-            System.out.println(sum1); // System.out.println( arr8[i] + arr8[i+1] )
+            //arr8[arr8.length]
+            sum1 = arr8[i] + arr8[i + 1]; 
+            // System.out.println(arr8[i] + arr8[i+1])
+            System.out.println(sum1); 
         }
 
 
-        // important
-        // ****************************************************************************** */
-        // array swap
-        // move max value to the tail
-        // for loop + sway
+        //***************important******************* */
+        //array swap
+        //move max value to the tail
+        //for loop + swap
         int[] arr7 = new int[] {9, -8, 109, 99, 98};
 
-        int temp = 0; // for temp storing
+        //for temp storing
+        int temp = 0; 
 
         for (int i = 0; i < arr7.length - 1; i++) {
             if (arr7[i] > arr7[i + 1]) {
@@ -222,7 +232,7 @@ public class DemoArray {
         // should return (x, x, x, 109)
 
 
-
+        //Integer 係大楷, 係 object, Integer[] 係 object array
         Integer[] arr11 = new Integer[] {9, 6, 4};
 
         // Product of all numbers
@@ -243,14 +253,18 @@ public class DemoArray {
         System.out.println(totalAmount);
 
 
-
-        String s = String.valueOf(123); // valueOf 將 123 變 string 形態
+        //valueOf 將 123 變 string 形態
+        //String is a class, has method
+        String s = String.valueOf(123); 
         System.out.println(s);
         s = String.valueOf(true);
         System.out.println(s);
 
-        Integer i1 = Integer.valueOf("123"); //string turn value form
-        System.out.println(i1);
+        //Integer is a class, has method
+        //no new, is not creating an object
+        //string type turn value int form
+        Integer i1 = Integer.valueOf("123"); 
+        System.out.println(i1 + "int type");
 
         //testing
         x=0;
@@ -266,6 +280,8 @@ public class DemoArray {
         //做大工程, swap
         // Integer i2 = Integer.valueOf("h") // cannot, h is char cannot assign to Integer
 
+        //"Hello" is a string, string class has method
+        //toCharArray(), 其實都係 for loop
         // "Hello" -> 'h' 'e' 'l' 'l' 'o'
         char[] chArr = "Hello".toCharArray();
         System.out.println(chArr[0]);
@@ -273,9 +289,11 @@ public class DemoArray {
         System.out.println(chArr[2]);
         System.out.println(chArr[3]);
 
-        // olleh
-        // swap
-        char temp1 = ' ';
+        //olleh
+        //swaping
+        //char default is '\u0000'
+        //唔 initialization 都冇問題
+        char temp1;
 
         for (int i = 0; i < chArr.length / 2; i++) {
             temp1 = chArr[i];
@@ -283,6 +301,7 @@ public class DemoArray {
             chArr[chArr.length - 1 - i] = temp1;
         }
 
+        //String 要 initialized
         String result = "";
         for (int i = 0; i < chArr.length; i++) {
             result = result + chArr[i];
@@ -298,21 +317,26 @@ public class DemoArray {
         chArr = "hello".toCharArray();
         for (int i = 0; i < chArr.length; i++) {
 
+            //強行轉 char
             chArr[i] = (char) (chArr[i] + 1);
         }
         System.out.println(String.valueOf(chArr)); // "ifmmp", char Array -> String
 
 
-        // **************************************************** */
+
         // 因為英文字母只有 26 個, 所以 create int[26]
         
         char maxNumChar = ' ';
         char[] arr12 = new char[] {'p', 'a', 'p', 'b', 'a', 'p'};
         
-        // declare int array with 26 houses, each house for each letter for counting
+        //declare int array with 26 houses, each house for each letter for counting
         int[] counters = new int[26]; // int default value is 0
         
         for( int i = 0 ; i < arr12.length ; i++ ){
+            //用一個位比佢減
+            //因為 a-a = 0, 會放係 counters[0] 位置
+            //b-a = 1, 會放係 counters[1] 位置
+            //then counters[0] + 1
             counters[arr12[i] - 'a']++;
         }
         int max2 = Integer.MIN_VALUE;

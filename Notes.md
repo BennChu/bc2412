@@ -4,9 +4,11 @@ public class .....{
   public static void main(String[] args){}
 }
 
-- Date Types (8 primtives)
+- Date Types (8 primtives) -> DemoDataType.java
   - 6 of them handles numbers
+    byte -> short -> int -> long -> float -> double
   - char & boolean
+
 - operator (++x, x++)
   - Division ( divided by 0)
   - Math 
@@ -29,4 +31,14 @@ public class .....{
  - Method name
  - Method signature = input params + method name
  - BigDecimal (class) for calculation
+
+
+ ## Week 3
+ - Class and Object Example: Customer/ Order/ Item Example: Person     
+   Example: Human (bmi)
+   Static Variable Example: Supermarket & Worker , Supermarket2 & Worker2
+   Static Method Example: Circle, LoanCalculator
+ ## Week 4
+   Class & Object Example: Deck & Card Example: Library, Book & Librarian
+   Static Variable Example: Candy & Student
 

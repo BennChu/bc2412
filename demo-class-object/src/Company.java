@@ -16,6 +16,7 @@ public class Company {
         this.employee = employee;
     }
 
+    //getter
     public String getName(){
       return this.name;
     }
@@ -28,10 +29,24 @@ public class Company {
       return this.location;
     }
 
-    public int  getEmployee(){
+    public int getEmployee(){
       return this.employee;
     }
   
+
+    //setter
+    public void setName(String name){
+        this.name = name;
+    }
+    
+    public void setStockCode(int stockCode){
+        this.stockCode = stockCode;
+    }
+
+    public void setLocation(String location){
+      this.location = location;
+  }
+
 
     public static void main(String[] args){
 
@@ -51,6 +66,12 @@ public class Company {
         System.out.println(c.getEmployee());
 
       }
+
+      //set c1 company stock code from 168 to 888
+      c1.setStockCode(888);
+
+      System.out.println(c1.getStockCode());  //888
+
 
 
 

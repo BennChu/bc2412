@@ -1,6 +1,7 @@
 public class Code3146 {
 
-    public int findPermutationDifference(String s, String t) {
+
+    public static void main(String[] args)     {
         
 
         //permutation difference between 2 strings
@@ -18,7 +19,8 @@ public class Code3146 {
         }
 
       */
-
+        String s = "asdfghjkl";
+        String t = "asdfg";
         int total = 0;
 
         for( int i = 0 ; i < s.length() ; i++ ){
@@ -32,28 +34,9 @@ public class Code3146 {
             }
 
         }
-        return total;
+        System.out.println(total);
     }
-
-    public static void main(String[] args){
-
-
-      
-    }
-
 
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-}
