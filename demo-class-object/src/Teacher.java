@@ -27,7 +27,7 @@ public class Teacher {
     public void distribute() {
 
        int pos = 0;
-       while( true ) { //always true, so always loop, so need to be very careful
+       while( true ) { //this is always true, so always loop, so need to be very careful
            for( Student2 student : this.students ) {
                if( shouldDistribute( student.getScore(), this.candies[pos].getColor())) {
                    student.receiveCandy(this.candies[pos]);
@@ -40,7 +40,6 @@ public class Teacher {
            }
        }
         
-
     }
     
 

@@ -16,7 +16,7 @@ public class DemoString {
 
     // + operation, String can add more letter
     password = password + "!";
-    System.out.println(password); // abcd1234!
+    System.out.println(password); //abcd1234!
 
     // Java method (Instance method)
     // action
@@ -34,7 +34,8 @@ public class DemoString {
 
     //print the last character of string
     String password2 = "helloworld";
-    char lastChar = password2.charAt(password2.length()-1); // do bracket first, 10-1
+     //do bracket first, 長度-1
+    char lastChar = password2.charAt(password2.length()-1);
     System.out.println("lastChar = " + lastChar);
 
 
@@ -60,8 +61,10 @@ public class DemoString {
 
 
     //empty string
+    //char cannot like this char empty = ''; can like char empty = ' ';
+    //can like this char empty  = ' '; this is a space
     String emptyString ="";
-    System.out.println("empty String = " + emptyString.length());
+    System.out.println("empty String = " + emptyString.length());// return 0
     //System.out.println(emptyString.charAt(0));
 
     boolean isStringEmpty = "".equals(emptyString);
@@ -69,10 +72,10 @@ public class DemoString {
 
 
     String s = "Hello";
-    System.out.println("Hello".equals(s)); // asking if s equals to "Hello"
+    System.out.println("Hello".equals(s)); //asking if s equals to "Hello"
 
-    System.out.println("Hello".charAt(2)); // should return l
-    System.out.println("Hello length is " + "Hello".length()); // should return 5
+    System.out.println("Hello".charAt(2)); //return l, index 0 = H, index 1 = e, index 2 = l
+    System.out.println("Hello length is " + "Hello".length()); //return 5
 
     // 'c' is char cannot .charAt(), primitive has no method (tool)
 

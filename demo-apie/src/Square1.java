@@ -1,15 +1,19 @@
 import java.math.BigDecimal;
 
-public class Square extends Shape {
+public class Square1 extends Shape1 {
 
     private String color;
     private double side;
 
 
     //constructor
-    public Square(String color, double side) {
+    public Square1(String color, double side) {
         super(color);
         this.side = side;
+    }
+
+    public double getSide() {
+        return this.side;
     }
 
     //it is not division, no need roundingmode
@@ -18,8 +22,6 @@ public class Square extends Shape {
     }
 
     public static void main(String[] args) {
-        Square sq1 = new Square("BLUE", 4);
         
-        System.out.println("The area is " + sq1.area());
     }
 }

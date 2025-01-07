@@ -363,23 +363,18 @@ public class LoopExercise {
     long max1 = Integer.MIN_VALUE;
     long min = Integer.MAX_VALUE;
     for( int i = 0 ; i < arr14.length ; i++ ) {
-        if( arr14[i] > max1 ){
-            max1 = arr14[i];
-        }else if(arr14[i] < min){
-            min = arr14[i];
-        }
+        // if( arr14[i] > max1 ){
+        //     max1 = arr14[i];
+        // }else if(arr14[i] < min){
+        //     min = arr14[i];
+        // }
+        if( arr14[i] > max1 ) max1 = arr14[i];
+
+        if(arr14[i] < min ) min = arr14[i];
+
     }
     System.out.println("the max is = " + max1 );
     System.out.println("the min is = " + min );
-
-
-    // long min = Integer.MAX_VALUE;
-    // for( int i = 0 ; i < arr14.length ; i++ ){
-    //     if ( arr14[i] < min ){
-    //       min = arr14[i];
-    //     }
-    // }
-    // System.out.println("the min is = " + min );
 
 
 
@@ -427,6 +422,7 @@ public class LoopExercise {
     }
     //return a string of the content of the array
     System.out.println(Arrays.toString(temp11));
+    
 
     // double temp2 = arr16[2];
     // BigDecimal bd4 = BigDecimal.valueOf(0.1);
@@ -579,28 +575,21 @@ public class LoopExercise {
     // 20. Find the longest String in the String array
     // Print "longest=programming"
     String[] arr20 = new String[] {"python", "array", "programming", "java", "bootcamp"};
-    int maxLength = 0;
+    int maxLength = Integer.MIN_VALUE;
     maxIndex = 0;
 
     System.out.println();
     System.out.println("20. Find the longest String in the String array");
 
-    int[] s20 = new int[arr20.length];
-
-    for( int i = 0 ; i < arr20.length ; i++ ){
-        s20[i] = arr20[i].length();
-
-    }
 
     //System.out.println(Arrays.toString(s20));
 
-    for( int i = 0 ; i < s20.length ; i++ ){
-        maxLength = Math.max(s20[i], maxLength);
-    }
-
-    for( int i = 0 ; i < s20.length ; i++ ){
-        if( s20[i] == maxLength)
-          maxIndex = i;
+    for( int i = 0 ; i < arr20.length ; i++ ){
+        //maxLength = Math.max(s20[i], maxLength);
+        if( arr20[i].length() > maxLength ) {
+            maxLength = arr20[i].length();
+            maxIndex = i;
+        }
     }
 
 

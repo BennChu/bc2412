@@ -76,14 +76,14 @@ public class Circle {
     //area
     //BigDecimal
 
-    Circle c1 = new Circle(3.0); //create circle object 俾左 radius
+    Circle1 c1 = new Circle1(3.0); //create circle object 俾左 radius
                                  //c1 係 pointer, 指住 3.0
 
     System.out.println(c1.calculateArea());
     System.out.println(c1.circumference());
 
     //static method, both are the same
-    System.out.println(Circle.calculateArea(3.0));
+    System.out.println(Circle1.calculateArea(3.0));
     System.out.println(calculateArea(3.0));
 
 

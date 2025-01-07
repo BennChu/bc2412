@@ -38,7 +38,7 @@ public class DemoForEachLoop {
         char[] arr2 = new char[] {'p','t','e'};
         String str = "";
 
-        for(char c : arr2){
+        for(char c : arr2){//arr2 is a char array
             str += c;
         }
         System.out.println(str);

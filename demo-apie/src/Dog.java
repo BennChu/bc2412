@@ -1,4 +1,4 @@
-public class Dog extends Animal {
+public class Dog extends Animal implements KeepAlive {
     
     /* Parent class is Animal.class
      * inherit all attributes from Animal.class
@@ -20,15 +20,41 @@ public class Dog extends Animal {
     //     return this.name;
     // }
 
+    
     public void walk() {
         System.out.println("Dog is walking");
     }
 
+    //repeat 左 eat() method
+    // @Override
+    // public void eat() {
+    //     System.out.println("Dog is eating");
+    // }
+    @Override
+    public void drink() {
+        System.out.println("Dog is drinking");
+    }
+
+    @Override
+    public void sleep() {
+        System.out.println("Dog is sleeping");
+    }
+
+    @Override
+    public void eat() {
+        System.out.println("Dog is eating");
+    }
+
+
+
     public static void main(String[] args) {
 
-        Dog dog = new Dog("my name is dog");
+        Dog dog = new Dog("dog");
         System.out.println(dog.getName());
         dog.walk();
+        dog.eat();
+        dog.drink();
+        dog.sleep();
 
 
 

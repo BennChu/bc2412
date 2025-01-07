@@ -25,7 +25,7 @@ public class .....{
  - for each loop (simple design for loop: one element per iteration)
  - array (support 17 types) ****important***
  - 8 wrapper classes 對應 8 primitives
- - string methods
+ - string methods, example: DemoString
  - Methods (Similar to formula)
  - Method type
  - Method name
@@ -42,3 +42,25 @@ public class .....{
    Class & Object Example: Deck & Card Example: Library, Book & Librarian
    Static Variable Example: Candy & Student
 
+  extends
+  override
+  abstract class -> cannot 俾人 new object
+      Example: public abstract class Hero
+  abstract method() -> child class must provide the implementation of abstract method
+      Example: Shape1.class -> abstract double area()
+  final
+!!very important -> 3 methods to check if they are the same object
+eg.Animal.class, Pig.class, Cat.class
+
+Class name 加 's' 用黎放 static methods
+e.g. Objects.equals, Objects 內有一個 static method equals()
+
+interface, example: Shape2
+interface vs abstract
+APIE
+huge change after java 8
+java 俾工具你
+parent class 開 array 可以開 child class array
+Example: Animal.class, Shape1.class
+enum, Example: Direction, Currency, OrderStatus
+generics
