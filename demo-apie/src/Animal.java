@@ -23,9 +23,9 @@ public class Animal implements Eatable {
      * common attribute of cats and dogs
      * Animal.class 係有野 store 野
      */
-    public Animal(String name) {
+    public Animal(String name, int age) {
         this.name = name;
-        //this.age = age;
+        this.age = age;
     }
 
     public String getName() {
@@ -37,7 +37,7 @@ public class Animal implements Eatable {
     }
     
     //implements Eatable
-    //Eatable 內有 eat()
+    //Eatable 內有 void eat()
     //係 java 世界, make sure Animal 有 eat method
     @Override //唔寫 Override 冇問題, complier 唔會 check
     public void eat() {
@@ -54,34 +54,35 @@ public class Animal implements Eatable {
         Animal cat2 = new Cat ("Mary", 2);
         //Rule 1.During the compile time, 
         //       "Animal cat2" implies the object can be accessed in "Animal Scope".
-        //       唔可以 call cat 既野 只可 call 
+        //       唔可以 call cat 既野 只可 call Animal
         //       由 type 決定 你可以 call what
         //       cat2.sleep();//call 唔到, Animal 只有 Eat(), 冇 sleep(), 冇 walk()
         //       cat2.walk();
-        cat2.getName();
-        cat2.eat();
+        cat2.getName(); //Animal.class has this method
+        cat2.eat(); //Animal.class and Cat.class both have this method
 
 
         //Rule 2.run time
         //left side, 有咩 method
         //cannot call sleep, 
-        Animal cat3 = new Animal("Vincent");
+        Animal cat3 = new Animal("Vincent",10);
         cat3.eat();//Animal is eating
 
 
         //cannot place a parent to child reference
-        //Cat cat4 = new Animal ("Lucas");
+        //Cat cat4 = new Animal ("Lucas");//前面係 Cat class, 後面係 Animal type
 
         //Parent class 好處
-        //開一條 Animal array, 就可以開其它 animal array
+        //開一條 Animal array, 就可以放其它 animals (Cat, Dog, Pig) 係array
         //唔使開 3 條 array
         //用 Parent 做個 type
         Animal[] animals = new Animal[4];//Cat, Dog, Pig
         animals[0] = new Cat("ABC",2);
-        animals[1] = new Cat("ABC",2);
-        animals[2] = new Cat("ABC",2);
-        animals[3] = new Animal("XYZ");//可以放 Animal or 以下
-                                       //唔想開 Animal 傽人放 Animal, then "abstract"
+        animals[1] = new Cat("CDE",2);
+        animals[2] = new Cat("EFG",2);
+        animals[3] = new Animal("XYZ",10);//可以放 Animal or 以下
+                                          //唔想開 Animal 傽人放 Animal, then "abstract"
+        System.out.println("animals[0].getName() is " + animals[0].getName());
 
         Cat[] cats = new Cat[3];
         cats[0] = new Cat ("123",5);
@@ -89,8 +90,8 @@ public class Animal implements Eatable {
         //Example 2
         Shape1[] shapes1 = new Shape1[3];
         shapes1[0] = new Circle1(Color.RED, 3);
-        shapes1[1] = new Square1("BLUE", 4);
-        shapes1[2] = new Triangle1("YELLOW", 3 , 4);
+        shapes1[1] = new Square1(Color.BLUE, 4);
+        shapes1[2] = new Triangle1(Color.YELLOW, 3 , 4);
 
         //calculate area
         //left side is type, right side is which array
@@ -106,7 +107,11 @@ public class Animal implements Eatable {
         //你唔驗唔可以 downcast, 因為你唔知真身
         //合 downcast 用
         for( Shape1 shape : shapes1 ) {
-            if (shape instanceof Circle1) {
+            if (shape instanceof Circle1) {//shape 係唔係 instanceof circle1
+                                           //用 for loop, loop shapes1 array
+                                           //check 裹面真身係唔係 Cirlce1
+                                           //係就 downcast to Circle1
+                                           //放係 Circle1 circle 度跟住做野
                 Circle1 circle = (Circle1) shape;//this is downcast, double y=2.0; 
                 System.out.println( circle.getRadius());//comply with rule 1
             } else if (shape instanceof Square1) {
@@ -124,7 +129,7 @@ public class Animal implements Eatable {
 
         Sleepable[] animals2 = new Sleepable[2];
         animals2[0] = new Cat("Steve",2);
-        animals2[1] = new Dog("Owen");;
+        animals2[1] = new Dog("Owen",9);;
         //animals2[2] = new Animals(); //cannot, Animal didnt implement Eatable
 
         animals2[1].sleep();
@@ -134,7 +139,7 @@ public class Animal implements Eatable {
 
         Animal animal = new Cat("ABC", 3);
         animal.eat();
-        animal = new Dog("CDE");
+        animal = new Dog("CDE",8);
         animal.eat();
             
 

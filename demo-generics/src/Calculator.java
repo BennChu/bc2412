@@ -1,5 +1,24 @@
 public class Calculator<T extends Number> {//Number is Byte, Short, Integer, Long, Float, Double
 
+    //if we achieve the same purpose without generics
+    //ByteCalculator.class
+    //Short
+    //Integer
+    //Long
+    //Float
+    //Double
+    //Numbercalculator.class
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     private T x; //T 唔知係乜, 所以唔可以加
                 // extends parent class Number
     private T y;

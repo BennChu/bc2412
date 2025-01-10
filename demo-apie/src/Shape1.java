@@ -33,25 +33,25 @@ public abstract class Shape1 {
     public static Shape1 create(char ref) {//S -> Square, C -> Circle
         switch(ref) {
             case 'S':
-                return new Square1("RED", 4);
+                return new Square1(Color.RED, 4);
             case 'C':
-                return new Circle1("BLUE", 5);
+                return new Circle1(Color.BLUE, 5);//因為 Circle1 改左用 enum Color type
             default:
                 return null;
-
-
+        }
     }
 
-    public static Circle1 createCircle(String color, double radius) {
+    public static Circle1 createCircle(Color color, double radius) {
         return new Circle1(color, radius);
     }
     
     public static void main(String[] args) {
         //如果 create new object, compile error, cannot new Shape1()
-
+        //Shape1 is abstract class, cannot new object
         Shape1.create('S');
         Shape1.create('C');
-        Circle1 c2 = Shape1.createCircle("BLUE", 5);
+        //Shape1.createCircle() return Circle1 type
+        Circle1 c2 = Shape1.createCircle(Color.BLUE, 5);
 
         //Heros.createArcher();
     }

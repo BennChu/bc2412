@@ -2,12 +2,12 @@ import java.math.BigDecimal;
 
 public class Square1 extends Shape1 {
 
-    private String color;
+    private Color color;
     private double side;
 
 
     //constructor
-    public Square1(String color, double side) {
+    public Square1(Color color, double side) {
         super(color);
         this.side = side;
     }

@@ -7,10 +7,11 @@ public class Dog extends Animal implements KeepAlive {
      * no need private String name
      */
 
-    //private String name;
+    private String name;
+    private int age;
 
-    public Dog(String name) {
-        super(name); //唔放落自己度 this, 放落 parent 度
+    public Dog(String name, int age) {
+        super(name,age); //唔放落自己度 this, 放落 parent 度
                      //class cannot inherit parent constructor
     }
     
@@ -49,7 +50,7 @@ public class Dog extends Animal implements KeepAlive {
 
     public static void main(String[] args) {
 
-        Dog dog = new Dog("dog");
+        Dog dog = new Dog("dog",5);
         System.out.println(dog.getName());
         dog.walk();
         dog.eat();

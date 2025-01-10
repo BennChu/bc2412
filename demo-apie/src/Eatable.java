@@ -1,8 +1,8 @@
 public interface Eatable {
     
     /* is a contract for class to use
-     * implicitly public, so no need write public on methods
-     * method only abstract, so no need to write abstract
+     * no need write public, implicitly public
+     * no need to write abstract, only abstract
      */
 
     //method implicitly public, so no need write public on methods
@@ -16,7 +16,7 @@ public interface Eatable {
     public static void main(String[] args) {
 
 
-        System.out.println(x);
+        //System.out.println(x);
 
         //interface cannot new object
         //cannot instantiate the type Eatable

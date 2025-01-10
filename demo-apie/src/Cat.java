@@ -17,12 +17,11 @@ public class Cat extends Animal implements Walkable, Eatable, Sleepable {
 
     public Cat(String name, int age) {
         //this.name = name;
-        super(name);//calling Parent Constructor, super is a keyword to call parent class
+        super(name,age);//calling Parent Constructor, super is a keyword to call parent class
                     //call parent 容器放名入去
                     //super is calling public Animal(String name)
                     //super must be put at the first line in the constructor
                     //只可得一個 super()
-        this.age = age;
         }
     
     //inherit Parent all instance methods
@@ -30,6 +29,7 @@ public class Cat extends Animal implements Walkable, Eatable, Sleepable {
     //public String getName() {
     //    return this.name;
     //}
+
 
     // public int getAge() {
     //     return this.age;
@@ -68,6 +68,11 @@ public class Cat extends Animal implements Walkable, Eatable, Sleepable {
       * This ensures that the method you're intending to override actually exists and
       * is correctly overridden.
       */
+
+    public String getName() {
+        return "testing";
+    }
+
 
     public static void main(String[] args) {
 

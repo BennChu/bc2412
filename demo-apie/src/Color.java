@@ -5,6 +5,9 @@ public enum Color {
      * can call 到佢地
      * Example: weekdays, mon, tue ...
      * Example: currency, USD, HKD, ...
+     * 如果要用佢, RED YELLOW BLUE 就係一個 object
+     * Color.RED
+     * Color.YELLOW
      */
 
      RED, 

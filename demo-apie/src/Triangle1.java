@@ -2,11 +2,11 @@ import java.math.BigDecimal;
 
 public class Triangle1 extends Shape1 {
 
-    private String color;
+    private Color color;
     private double base;
     private double height;
 
-    public Triangle1(String color, double base, double height) {
+    public Triangle1(Color color, double base, double height) {
 
         super(color);
         this.base = base;

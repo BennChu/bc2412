@@ -4,7 +4,7 @@ public class Pig extends Animal {
 
     //class cannot extends more than 1 parent class
     //Pig.class own attributes
-    private boolean wings;
+    //private boolean wings;
     private int age;
 
 
@@ -18,8 +18,8 @@ public class Pig extends Animal {
     //constuctor
     //name 放落 Parant class 容器 (Animal.class)
     public Pig(String name, int age) {
-        super(name);
-        this.age = age;
+        super(name,age);
+        //this.age = age;
         //this.wings = wings;
     }
 

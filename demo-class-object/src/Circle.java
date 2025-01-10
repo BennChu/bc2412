@@ -76,7 +76,7 @@ public class Circle {
     //area
     //BigDecimal
 
-    Circle1 c1 = new Circle1(3.0); //create circle object 俾左 radius
+    Circle1 c1 = new Circle1(Color.YELLOW, 3.0); //create circle object 俾左 radius
                                  //c1 係 pointer, 指住 3.0
 
     System.out.println(c1.calculateArea());

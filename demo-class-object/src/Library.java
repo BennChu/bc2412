@@ -177,9 +177,6 @@ public class Library {
 
 
 
-
-
-
         /* prefer for each loop, if only read an array */
         for( Book book : lb1.getBooks() ) 
             System.out.println(book.getTitle() + " " + book.getAuthor());
