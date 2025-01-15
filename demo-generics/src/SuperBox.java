@@ -1,4 +1,4 @@
-public class SuperBox<T extends Animal,U extends Hero1,V extends Weapon> {
+public class SuperBox<T extends Animal1,U extends Hero1,V extends Weapon> {
     
     private T animal;
     private U hero;
@@ -24,7 +24,7 @@ public class SuperBox<T extends Animal,U extends Hero1,V extends Weapon> {
 
     public static void main(String[] args){
 
-        SuperBox<Animal, Hero1, Weapon> s1 = new SuperBox<>();
+        SuperBox<Animal1, Hero1, Weapon> s1 = new SuperBox<>();
         s1.setAnimal(new Tiger());
         s1.setHero(new Mage());
         s1.setWeapon(new Bow());

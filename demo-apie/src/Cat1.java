@@ -1,4 +1,4 @@
-public class Cat extends Animal implements Walkable, Eatable, Sleepable { 
+public class Cat1 extends Animal1 implements Walkable, Eatable, Sleepable { 
     
     /**
      * extends only 1 class
@@ -13,15 +13,15 @@ public class Cat extends Animal implements Walkable, Eatable, Sleepable {
 
     //private String name; inherit from Parent Animal.class
     //int age is Cat.class own attritbute
-    private int age;
+    //private int age; super no need declare
 
-    public Cat(String name, int age) {
+    public Cat1(String name, int age) {
         //this.name = name;
         super(name,age);//calling Parent Constructor, super is a keyword to call parent class
-                    //call parent 容器放名入去
-                    //super is calling public Animal(String name)
-                    //super must be put at the first line in the constructor
-                    //只可得一個 super()
+                        //call parent 容器放名入去
+                        //super is calling public Animal(String name)
+                        //super must be put at the first line in the constructor
+                        //只可得一個 super()
         }
     
     //inherit Parent all instance methods
@@ -76,8 +76,9 @@ public class Cat extends Animal implements Walkable, Eatable, Sleepable {
 
     public static void main(String[] args) {
 
-        Cat cat = new Cat("milk", 8);
-        System.out.println(cat.getName());
+        Cat1 cat = new Cat1("milk", 8);
+        System.out.println(cat.getName());//override 左, 用左 Cat1.class method getName() not Animal1.class method getName(), will return testing
+                                          //if not override, then will use Animal1.class method getName(), will return milk
         cat.walk();
         cat.eat(); //before override "Animal is eating...", use Parent class method
                    //after override "Cat is eating...", child class method

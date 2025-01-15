@@ -7,7 +7,7 @@ public class DemoDeque {
 
     public static void main(String[] args) {
 
-
+        //a type of data structure
         //left 範圍 : right speed
         //有 add first add last
         //之前 FIFO, 宜家多左
@@ -34,11 +34,21 @@ public class DemoDeque {
         //offer
         //ArrayDeque
 
-        Deque<String> ss2 = new ArrayDeque<>();
-        Queue<String> ss3 = new ArrayDeque<>();
+        //Parent control 範圍, child methods
+        Queue<String> ss3 = null;
 
+         int x = 3;
+         if (x>2) {
+            ss3 = new ArrayDeque<>();
+         } else {
+            ss3 = new LinkedList<>();
+         }
 
+         ss3.poll(); //different implementions -> peformance according to scenario
 
+         Deque<String> ss2 = new ArrayDeque<>();
+         ss2 = new LinkedList<>();
+        //Deque has wider scope (ie add/remvoe/poll/peek first & last)
     }
     
 }

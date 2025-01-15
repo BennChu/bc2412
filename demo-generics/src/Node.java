@@ -59,6 +59,7 @@ public class Node {
             System.out.println(temp.getValue());//由頭開始 getValue()
             temp = temp.next(); //去到尾冇野攞, null
         }
+        
         //for loop and for each cannot 
 
         //Array vs LinkedList, LinkedList important

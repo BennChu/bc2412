@@ -1,4 +1,4 @@
-public class Animal implements Eatable {
+public class Animal1 implements Eatable {
 
     /* 同 eatable related */
 
@@ -15,7 +15,7 @@ public class Animal implements Eatable {
     /**
      * empty constructor
      */
-    public Animal() {
+    public Animal1() {
         
     }
 
@@ -23,7 +23,7 @@ public class Animal implements Eatable {
      * common attribute of cats and dogs
      * Animal.class 係有野 store 野
      */
-    public Animal(String name, int age) {
+    public Animal1(String name, int age) {
         this.name = name;
         this.age = age;
     }
@@ -47,11 +47,11 @@ public class Animal implements Eatable {
 
     public static void main(String[] args) {
 
-        Cat cat = new Cat ("Jimmy", 3);
+        Cat1 cat = new Cat1 ("Jimmy", 3);
         System.out.println(cat.getName());//Jimmy
 
 
-        Animal cat2 = new Cat ("Mary", 2);
+        Animal1 cat2 = new Cat1 ("Mary", 2);
         //Rule 1.During the compile time, 
         //       "Animal cat2" implies the object can be accessed in "Animal Scope".
         //       唔可以 call cat 既野 只可 call Animal
@@ -65,7 +65,7 @@ public class Animal implements Eatable {
         //Rule 2.run time
         //left side, 有咩 method
         //cannot call sleep, 
-        Animal cat3 = new Animal("Vincent",10);
+        Animal1 cat3 = new Animal1("Vincent",10);
         cat3.eat();//Animal is eating
 
 
@@ -76,16 +76,16 @@ public class Animal implements Eatable {
         //開一條 Animal array, 就可以放其它 animals (Cat, Dog, Pig) 係array
         //唔使開 3 條 array
         //用 Parent 做個 type
-        Animal[] animals = new Animal[4];//Cat, Dog, Pig
-        animals[0] = new Cat("ABC",2);
-        animals[1] = new Cat("CDE",2);
-        animals[2] = new Cat("EFG",2);
-        animals[3] = new Animal("XYZ",10);//可以放 Animal or 以下
+        Animal1[] animals = new Animal1[4];//Cat, Dog, Pig
+        animals[0] = new Cat1("ABC",2);
+        animals[1] = new Cat1("CDE",2);
+        animals[2] = new Cat1("EFG",2);
+        animals[3] = new Animal1("XYZ",10);//可以放 Animal or 以下
                                           //唔想開 Animal 傽人放 Animal, then "abstract"
         System.out.println("animals[0].getName() is " + animals[0].getName());
 
-        Cat[] cats = new Cat[3];
-        cats[0] = new Cat ("123",5);
+        Cat1[] cats = new Cat1[3];
+        cats[0] = new Cat1 ("123",5);
 
         //Example 2
         Shape1[] shapes1 = new Shape1[3];
@@ -122,13 +122,13 @@ public class Animal implements Eatable {
         }
 
         //Example 4: for interface
-        Eatable cat4 = new Cat ("Tommy", 5);
+        Eatable cat4 = new Cat1 ("Tommy", 5);
         cat4.eat();//Eatable 有 eat()
                    //Cat is eating
                    //cat4.walk(), cannot
 
         Sleepable[] animals2 = new Sleepable[2];
-        animals2[0] = new Cat("Steve",2);
+        animals2[0] = new Cat1("Steve",2);
         animals2[1] = new Dog("Owen",9);;
         //animals2[2] = new Animals(); //cannot, Animal didnt implement Eatable
 
@@ -137,7 +137,7 @@ public class Animal implements Eatable {
                             //cannot eat()
 
 
-        Animal animal = new Cat("ABC", 3);
+        Animal1 animal = new Cat1("ABC", 3);
         animal.eat();
         animal = new Dog("CDE",8);
         animal.eat();

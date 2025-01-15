@@ -3,8 +3,8 @@ public class Mage1 extends Hero1 {
 
 
 
-    public Mage1 (Role1 role, long id, String name) {
-        super(role, id, name);
+    public Mage1 (long id, String name, Role1 role) {
+        super(id, name, role);
     }
 }
 

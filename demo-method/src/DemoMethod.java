@@ -1,9 +1,10 @@
 public class DemoMethod {
     
+
     // sum 係個名, (int x, int y) 係 input parameters 係入口, defined 係兩個 int values
     // int -> return type 出去門口
     // sum(int x, int y) -> method signature
-    public static int sum(int x, int y){
+    public static int sum(int x, int y) {
 
         int result = x + y;
         return result; // int (sum) -> int 係 retrun type, 要一樣, 所以唔可以 double
@@ -13,7 +14,7 @@ public class DemoMethod {
     // "sum(int a, int b)" = sum(int x, int y)
     //not allowed, bcoz same method name + same parameter list
     //public static int sum ( int a, int b )
-    public static int sum1 (int a, int b ){ // this is ok
+    public static int sum1(int a, int b) { // this is ok
 
         return 1;
     }

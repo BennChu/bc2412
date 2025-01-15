@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public abstract class Hero1 {
 
@@ -19,75 +20,67 @@ public abstract class Hero1 {
      * 
      */
     
-     private long id;
-     private int hp; //背後計數可能 double
-     private int mp;
-     private int level;
-     private String name;
-     private Role1 role;
+    private long id;
+    private String name;
+    private Role1 role;
 
 
-     public Hero1(Role1 role, long id, String name) {
+     public Hero1(long id, String name, Role1 role) {
         this.role = role;
         this.id = id;
-        this.hp = 100;
-        this.mp = 100;
-        this.level = 1;
         this.name = name;
      }
 
-     public Role1 getRole() {
-        return this.role;
-    }
-
-
+     /**
+      * getters -> can get id, name, role
+      * setters -> can change name, setName()
+      *            cannot change id and role
+      */
      public long getId() {
          return this.id;
-     }
-
-     public int getHp() {
-         return this.hp;
-     }
-
-     public int getMp() {
-         return this.mp;
-     }
-
-     public int getLevel() {
-         return this.level;
      }
 
      public String getName() {
          return this.name;
      }
 
+     //can change name
+     public void setName(String name) {
+        this.name = name;
+     }
+
+     public Role1 getRole() {
+        return this.role;
+     }
+
+
+
+
      @Override
      public String toString() {
          return "["
-                + " Type: " + getRole() + ","
-                + " Name: " + getName() + ","
                 + " ID: " + getId() + ","
-                + " HP: " + getHp() + ","
-                + " MP: " + getMp() + ","
-                + " Level: " + getLevel()
-                + "]";
+                + " Name: " + getName() + ","
+                + " Type: " + getRole() + ","
+                + "]\n"
+                ;
      }
 
 
 
-     public void phyAtt() {
-
+     public int physicalAtt() {
+        return -1;
      }
 
-     public void phyDef() {
-
+     public int physicalDef() {
+        return -1;
      }
 
-     public void magAtt() {
-
+     public int magicalAtt() {
+        return -1;
      }
 
-     public void magDef() {
+     public void magcialDef() {
 
      }
 
@@ -97,25 +90,45 @@ public abstract class Hero1 {
 
     public static void main(String[] args) {
 
-        // Hero1[] heros = new Hero1[1];
-        // heros[0] = new Hero1(Role1.Warrior, 00001L, "Ben");
-       //System.out.println(heros.length);
-       
-        ArrayList<Hero1> heros = new ArrayList<>();
-        heros.add(new Warrior1(Role1.Warrior, 00001L, "WinWin"));
-        heros.add(new Mage1(Role1.Mage, 00002L, "Lisa"));
-        heros.add(new Archer1(Role1.Archer, 00003L, "Add oil"));
+      
+
+        Warrior1 hero1 = new Warrior1(00001L, "WinWin", Role1.Warrior);
+        Mage1 hero2    = new Mage1(00002L, "Lisa", Role1.Mage);
+        Archer1 hero3  = new Archer1(00003L, "Add oil", Role1.Archer);
+        Warrior1 hero4   = new Warrior1(00004L, "Brave", Role1.Warrior);
+
+        System.out.println(hero1);
+
+        hero1.levelUp();
+        System.out.println(hero1);//Level: 2, HP: 180, MP: 100]
+
+        hero1.setHp(100);
+        System.out.println("assume under attack setHp100 " + hero1);
+
+        hero1.levelUp();
+        System.out.println(hero1);//Level: 3, HP: 260, MP: 100]
+
+        //System.out.println(Heros1.WAR_VAL[3][4]);
+
+        List<Hero1> heros = new ArrayList<>();
+        //heros[0] store an object reference
+        heros.add(hero1);
+        heros.add(hero2);
+        heros.add(hero3);
+        heros.add(hero3);
 
 
+        //test change name
+        //heros is an ArrayList, if go to specific position get()
+
+        //heros is an ArrayList object reference
         //System.out.println(heros.size());
-        //System.out.println(heros.get(0).getName());
-        //System.out.println(heros.get(0).getHp());
-        
-        System.out.println(heros);
+        //if print need to override toSting() method
+        //System.out.println(heros);  
+  
 
-  
-  
-  
+
+
        }
 
 

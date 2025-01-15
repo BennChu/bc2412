@@ -15,12 +15,12 @@ public abstract class Heros1 {
      * 11      is Experience Point (EP)
      */
 
-    public static final int[][] WAR_VAL = new int[][] {{0,  1,  2,  3,  4,  5,  6,  7,  8,  9,  10}, //Level
-                                                       {0,100,200,300,400,500,600,700,800,900,1000}, //Max HP
-                                                       {0,100,180,260,320,400,480,560,640,720, 800}, //Max MP
-                                                       {0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100}, //Physical Attack (PA)
-                                                       {0,  8, 16, 24, 32, 40, 48, 56, 64, 72,  80}, //Phsical Defence (PD)
-                                                       {0,  1,  2,  3,  4,  5,  6,  7,  8,  9,  10}, //Magical Attack (MA)
+    public static final int[][] WAR_VAL = new int[][] {{0,  1,  2,  3,  4,  5,  6,  7,  8,  9,  10}, //index 0, Level
+                                                       {0,100,200,300,400,500,600,700,800,900,1000}, //1, Max HP
+                                                       {0,100,180,260,320,400,480,560,640,720, 800}, //2, Max MP
+                                                       {0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100}, //3, Physical Attack (PA)
+                                                       {0,  8, 16, 24, 32, 40, 48, 56, 64, 72,  80}, //4, Phsical Defence (PD)
+                                                       {0,  1,  2,  3,  4,  5,  6,  7,  8,  9,  10}, //5, Magical Attack (MA)
                                                        {0,  1,  2,  3,  4,  5,  6,  7,  8,  9,  10}, //Magical Defence (MD)
                                                        {0,  1,  2,  3,  4,  5,  6,  7,  8,  9,  10}, //Agility (AG)
                                                        {0,  1,  2,  3,  4,  5,  6,  7,  8,  9,  10}, //Critical Damage Chance (CC)
@@ -62,6 +62,9 @@ public abstract class Heros1 {
 
     //public static int getMaxMp(Role role, int level)
 
+    public static int levelUp(int ep, int level) {
+        if (ep > level = level + 1;
+     }
 
 
 }

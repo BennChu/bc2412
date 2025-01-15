@@ -10,16 +10,18 @@ public class Teacher {
         this.students = students;
     }
 
+
     public static boolean shouldDistribute(int score, char color) {
         return score >= 80 && color == 'R'
                 || score >= 60 && score < 80 && color == 'B'
                 || score < 60 && color == 'Y';
-
     }
+
 
     public void clearCandy(int pos) {
         this.candies[pos] = null;
     }
+
 
     //Teacher, Candy2, Student2
     //Rule: Every round of distribution, Above 80 score -> RED; 
@@ -27,9 +29,9 @@ public class Teacher {
     public void distribute() {
 
        int pos = 0;
-       while( true ) { //this is always true, so always loop, so need to be very careful
-           for( Student2 student : this.students ) {
-               if( shouldDistribute( student.getScore(), this.candies[pos].getColor())) {
+       while (true) { //this is always true, so always loop, so need to be very careful
+           for (Student2 student : this.students) {
+               if (shouldDistribute (student.getScore(), this.candies[pos].getColor())) {
                    student.receiveCandy(this.candies[pos]);
                    this.clearCandy(pos);
                    if( ++pos >= this.candies.length )

@@ -1,7 +1,8 @@
-import java.lang.reflect.Array;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Objects;
 
 
@@ -41,6 +42,8 @@ public class ArrayListExercise {
 
 
 
+
+
         // Exercise 2: Search and Update
     
         // 2a. Create an ArrayList of strings to store names of fruits: "Apple", "Banana", "Mango", and
@@ -68,9 +71,10 @@ public class ArrayListExercise {
             System.out.println("Found grapes");
         else {
             System.out.println("No grapes, then will add it to the list");
-            fruits.add("Grapes");//default add at the last
+            fruits.add("Grapes");//ArrayList add to the last
         }
         //System.out.println("Old list " + fruits);
+
 
         String s = "Mango";
         String s1 = "Peach";
@@ -136,6 +140,8 @@ public class ArrayListExercise {
         System.out.println(names);
 
 
+
+
     
         // Exercise 5: Check the numbers
     
@@ -160,6 +166,7 @@ public class ArrayListExercise {
 
         System.out.println(nums1.size());
 
+
         //nums1.remove(2.2);//remove() method 放 value
         found = false;
         for (Double num : nums1) {
@@ -172,9 +179,10 @@ public class ArrayListExercise {
         if (found)
             System.out.println("2.2 is removed");
         else
-            System.out.println("2.2 is not removed");
+            System.out.println("No 2.2");
         
         System.out.println(nums1.size());
+
 
 
 
@@ -211,6 +219,8 @@ public class ArrayListExercise {
 
 
 
+
+
     
         // Exercise 7: Convert HashSet to ArrayList
     
@@ -230,6 +240,10 @@ public class ArrayListExercise {
         System.out.println(arr2);
 
     
+
+
+
+
         // Exercise 8: ArrayList of Students
         // 8a. Create an ArrayList to store Student objects.
         // Add the following students:
@@ -249,12 +263,16 @@ public class ArrayListExercise {
         students.add(new Student(2,"Bob"));
         students.add(new Student(3,"Charlie"));
 
-        for (Student s3 : students) {
-            System.out.println( "Id: " + s3.getId() +"," + " Name: " + s3.getName());
+
+        Iterator<Student> listIterator = students.iterator();
+        while (listIterator.hasNext()) { //當 namesIterator 有下一個 element
+            System.out.println(listIterator.next());
         }
 
-        // for (Student s4 : ArrayList<Student> students) {
+        // for (Student s3 : students) {
+        //     System.out.println( "Id: " + s3.getId() +"," + " Name: " + s3.getName());
         // }
+
 
         //String s2 = ArrayListExercise.search(3, students);
         System.out.println(ArrayListExercise.search(3, students));
@@ -276,6 +294,8 @@ public class ArrayListExercise {
         else
             System.out.println("No student with name starts with A");
         
+
+
 
 
 

@@ -8,30 +8,41 @@ public class DemoLinkedList {
 
     public static void main(String[] args) {
 
+        //用 .add() to add entry
+        //has index
+        //right side 係場景
         LinkedList<String> strings = new LinkedList<>();//LinkedList and ArrayList same family collection, so has .add .
-        strings.add("ABC");
+        strings.add("ABC");//add to the end of the list
         strings.add("DEF");
         strings.add("XYZ");
         System.out.println(strings.size());//3
-        System.out.println(strings);
+        System.out.println(strings);//[ABC, DEF, XYZ]
 
-        System.out.println(strings.get(1));
 
-        strings.remove(1);//0 is index
-        System.out.println(strings);//DEF, XYZ
-        strings.add(1,"DEF");
-        System.out.println(strings);
+        System.out.println(strings.get(1));//get() info by index, DEF
+
+
+        strings.remove(1);//1 is index, remove by index
+        System.out.println(strings);//[ABC, XYZ]
+        
+
+        strings.add(1,"DEF");//before index 1 is XYZ, now index 1 is DEF
+        System.out.println(strings);//[ABC, DEF, XYZ], XYZ moved to next position, instead of replace
+
 
         strings.remove("ABC");//remove 第一個 match到
-        System.out.println(strings);//DEF
+        System.out.println(strings);//[DEF, XYZ]
+
 
         strings.add("Oscar");
         strings.add("Jenny");
-        strings.remove();           //retrieve and remove the head, ArrayList no this method
+        strings.remove();           //no index, return String and remove the head, ArrayList no this method
         System.out.println(strings);//Oscar, Jenny
+
 
         System.out.println(strings.contains("Jenny"));//true, return boolean
         System.out.println(strings.contains("Vincent"));//false
+
 
         //tiger, pig , common eat(), same family
         //contains(), add(), remove()...(Object obj) are common method for ArrayList and LinkedList
@@ -67,10 +78,15 @@ public class DemoLinkedList {
 
         List<Animal> animals = new ArrayList<>();
         animals.add(new Tiger());
-        animals.add(new Panda());
+        animals.add(new Tiger());
+        //animals.add(new Panda());
+
+        System.out.println(animals.size());
+
+        animals.remove();
 
         for (Animal animal : animals) {
-            System.out.println(animal.run());
+            System.out.println(animal.run());//1
         }
 
 

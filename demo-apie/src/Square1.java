@@ -2,7 +2,7 @@ import java.math.BigDecimal;
 
 public class Square1 extends Shape1 {
 
-    private Color color;
+    //private Color color; super 左唔洗 declara
     private double side;
 
 

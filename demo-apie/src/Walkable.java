@@ -29,7 +29,7 @@ public interface Walkable {
         System.out.println(Walkable.x);//3
         //Walkable.x=4, cannot change, x is final
 
-        System.out.println(Walkable.calculateDistance());//同隻cat 冇關係
+        System.out.println(Walkable.calculateDistance());//同隻cat 冇關係, static method
 
     }
 }

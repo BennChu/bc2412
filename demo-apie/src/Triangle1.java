@@ -2,7 +2,7 @@ import java.math.BigDecimal;
 
 public class Triangle1 extends Shape1 {
 
-    private Color color;
+    //private Color color; super 左唔使 declara
     private double base;
     private double height;
 

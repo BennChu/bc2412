@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
@@ -15,17 +16,18 @@ public class DemoQueue {
         //linkedList -> add/remove head/tail
         //阿媽 control Object 
         //LinkedList 都可以, 但 Queue 就精準, 可閱性
+        //有序, 但 LinkedList 狀態
         Queue<String> strings = new LinkedList<>();
 
-        strings.add("Oscar");//add last
-        strings.add("Vincent");//add last
-        strings.add("Lucas");//add last
-        System.out.println(strings);//有序, 但 LinkedList 狀態
+        strings.add("Oscar");//insert to the last of the queue
+        strings.add("Vincent");////insert to the last of the queue
+        strings.add("Lucas");////insert to the last of the queue
+        System.out.println(strings);//[Oscar, Vincent, Lucas]
 
 
-        String head = strings.poll();//remove the first, is null if queue is empty
-        System.out.println(head);
-        System.out.println(strings);
+        String head = strings.poll();//return String, retrieve and remove the first of the queue, null if queue is empty
+        System.out.println(head);//Oscar
+        System.out.println(strings);//[Vincent, Lucas]
 
 
         //Queue Interface hidden lots of funtions of LinkedList
@@ -36,7 +38,7 @@ public class DemoQueue {
 
 
         //lookup the head element, not pick up
-        System.out.println(strings.peek());//Lucas
+        System.out.println(strings.peek());//Lucas, retrieve but does not remove, the head of this queue
         System.out.println(strings.size());//1
 
         strings.offer("Jenny");
@@ -48,6 +50,9 @@ public class DemoQueue {
         System.out.println(qq.offer("ABC"));//true
         System.out.println(qq.offer("ABC"));//false
 
+        //all collection 都可以用
+        //諗吓 data structure 先用
+        //LinkedList and ArrayList can use
         for (String s : strings) {
             System.out.println(s); //Queue 都可以 for each loop
         }

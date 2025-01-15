@@ -1,4 +1,4 @@
-public class Dog extends Animal implements KeepAlive {
+public class Dog extends Animal1 implements KeepAlive {
     
     /* Parent class is Animal.class
      * inherit all attributes from Animal.class

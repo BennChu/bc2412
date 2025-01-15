@@ -1,6 +1,6 @@
 import java.util.Objects;
 
-public class Pig extends Animal {
+public class Pig extends Animal1 {
 
     //class cannot extends more than 1 parent class
     //Pig.class own attributes

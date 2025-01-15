@@ -1,3 +1,6 @@
+import Book;
+
+package src;
 public class Library {
 
 
@@ -17,33 +20,37 @@ public class Library {
     private Book[] books;
 
 
-    /* constructor
+    /**
+     * constructor
      * every time new 一個 library 都比一個 id 佢
      * book list 係  0
      * 如果你知道一開始係 1000 本書, 都可以
      */
     public Library(long id) {
         this.id = id;
-        this.books = new Book[0];
+        this.books = new Book[0];//this.books, 因為係一個儲住 array object reference
     }
 
-    /* return type is a Book[] array
+
+    /**
+     * return type is a Book[] array
      * means return array 內的內容
      * means 所有書
      */
-    public Book[] getBooks() {
+    public Book[] getBooks() { //return type is Book type array, so Book[]
         return this.books;
-
     }
 
-    /* return the length of the books array
+
+    /**
+     * return the length of the books array
      * means 有幾多本書
      */
     public int size() {
-        return this.books.length;
+        return this.books.length;//this.books 係一個 array object reference, so .length
     }
 
-    public void setBooks(Book[] book) {
+    public void setBooks(Book[] book) {//input Book type array to this object books, this.books
         this.books = book;
     }
 
@@ -100,41 +107,35 @@ public class Library {
      * 你係比左 books object reference 比人
      */
 
-     public Book[] searchByTitle(String title) {
+     public Book[] searchByTitle(String title) {//result maybe more than 1 book, so return an array
 
          //for the seaching results, maybe more than 1
          int count = 0;
 
         //  for( int i = 0 ; i < this.books.length ; i++ ) {
-         
         //      if( this.books[i].getTitle().contains(title) ) {
-
         //             results = new Book[arr.length+1];
-                    
         //             for( int j = 0 ; j < arr.length ; j++ ) { 
-                        
         //                 results[j] = arr[j];
         //             }
-
         //             results[results.length-1] = this.books[i];
         //      }
 
-            for( int i = 0 ; i < this.books.length ; i++ ) {
 
+            for (int i = 0 ; i < this.books.length ; i++) {
                 if( this.books[i].getTitle().contains(title) ) {
-
                     count++;
                 }
-
             }
 
             int idx = 0;
             //睇下上面 count 係幾多, 就 new array length 幾多
             //searching maybe more than 1 book
+            //create a Book type array called books to store object reference
             Book[] books = new Book[count];
             for( int i = 0 ; i < this.books.length ; i++ ) {
                 
-                if( this.books[i].getTitle().contains(title) ) {
+                if( this.books[i].getTitle().contains(title) ) {//this.books[1] 係一本 book, so can getTitle()
                     books[idx++] = this.books[i];
                 }
             }
@@ -164,7 +165,8 @@ public class Library {
         // lb1.add(new Book(000004L, "not to be poor", "elon musk"));
 
 
-        /* book
+        /**
+         * book
          * library
          * librarian
          * create a new Librarian (lbn1), 指住 a library (lb)
@@ -177,8 +179,9 @@ public class Library {
 
 
 
-        /* prefer for each loop, if only read an array */
-        for( Book book : lb1.getBooks() ) 
+        //prefer for each loop, if only read an array
+        //loop all books in the library, 每本書放落 book 度, then getTitle and getAuthor
+        for (Book book : lb1.getBooks()) 
             System.out.println(book.getTitle() + " " + book.getAuthor());
 
 
