@@ -650,9 +650,9 @@ public class StreamExercise {
                                             new Product("Notebook", 7));
 
     int totalPrice = products.stream()
-                             .map(e -> e.getPrice())
-                             .reduce(0, Integer::sum);
-    System.out.println(totalPrice);
+                             .map(e -> e.getPrice()) //map(Product::getPrice)
+                             .reduce(0, Integer::sum);//binary operator Integer::sum, sum method of Integer class
+    System.out.println(totalPrice);//22
 
 
 
