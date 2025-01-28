@@ -42,7 +42,7 @@ public class Cat1 extends Animal1 implements Walkable, Eatable, Sleepable {
 
     @Override
     public void eat() {
-        System.out.println("Cat is eating...");
+        System.out.println("Cat1 is eating...");
     }
 
     @Override

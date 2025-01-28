@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public abstract class Heros1 {
 
     /**
@@ -38,8 +41,9 @@ public abstract class Heros1 {
                                                        {0,  1,  2,  3,  4,  5,  6,  7,  8,  9,  10}, //Critical Damage Chance (CC)
                                                        {0, 20, 40, 60, 80,100,120,140,160, 180, 200}};//Critical Damage (CD)                                                 
     
-
-   //max hp 唔會變, 唔使跟 object, static 跟 static method
+    public static final List<Hero1> heroList = new ArrayList<>();
+   
+    //max hp 唔會變, 唔使跟 object, static 跟 static method
     //  private static final int[] ARC_MAX_HP_TAB;
     //  private static final int[] WAR_MAX_HP_TAB;
     //  private static final int[] MAG_MAX_HP_TAB;
@@ -64,6 +68,13 @@ public abstract class Heros1 {
 
     public static int levelUp(int ep, int level) {
         if (ep > level = level + 1;
+     }
+
+
+     public static void addRecord(Hero1 hero) {
+
+        heroList.add(hero);
+
      }
 
 

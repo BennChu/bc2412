@@ -92,15 +92,25 @@ public class Animal1 implements Eatable {
         shapes1[0] = new Circle1(Color.RED, 3);
         shapes1[1] = new Square1(Color.BLUE, 4);
         shapes1[2] = new Triangle1(Color.YELLOW, 3 , 4);
+        //shapes1[2] = new Shape1(Color.RED);//this one cannot, Shape1 is an sbstract class
 
         //calculate area
         //left side is type, right side is which array
         //Shape1 has method getColor, area()
+        //shapes1 指住 Shape1[] array, array 指住 Circle, Square, Tringle
+        //佢地都係 extend Shape1
+        //shapes1[0] 指住 Circle1, 如果 Circle1 有 override Shape1 area method, 就會用 circle1
         for ( Shape1 i : shapes1 )
             System.out.println( i.getColor() + " area is " + i.area());
 
         //System.out.println( shape.getRadius()) 唔可以, Shape1 冇呢個 method
-
+        //同上面一樣, 因為 Circle 有 override parent area method
+        System.out.println("Circle1 area: " + shapes1[0].area());
+        //cannot call getRadius()
+        //because the shapes1 array is of type Shape1, 
+        //and the Shape1 class doesn't have a getRadius() method. 
+        //Therefore, the compiler doesn't know that the actual object is a Circle1 with a getRadius() method
+        //System.out.println("Circle radius: " + shapes1[0].getRadius());
 
         //if (shape instanceof Circle) 真身係咪 Circle
         //因為你驗左真身, 所以可以小心咁 downcast

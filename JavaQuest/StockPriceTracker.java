@@ -9,7 +9,10 @@ import java.util.Queue;
 
 public class StockPriceTracker{
     // code here: Design your PQ, so that it always poll the highest price first.
+    
     Comparator<Double> descending = (x , y) -> y > x ? 1 : -1;
+    
+    //final means maxPricePQ 指針唔可以指其它野
     private final Queue<Double> maxPricePQ = new PriorityQueue<>(descending);
     private final Map<LocalDate, Double> tradeRecords = new HashMap<>();
     private final Deque<LocalDate> tradeDates = new LinkedList<>();
@@ -19,8 +22,10 @@ public class StockPriceTracker{
         // code here ...
         // 1. Add the trade record to the hashMap
         tradeRecords.put(date, price);
+        
         // 2. Add the price to PQ
         maxPricePQ.add(price);
+        
         // 3. Add the trade date to Deque
         tradeDates.add(date);
         System.out.println("Recorded: " + date + " -> $" + price);

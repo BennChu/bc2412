@@ -57,10 +57,19 @@ e.g. Objects.equals, Objects 內有一個 static method equals()
 
 interface, example: Shape2
 interface vs abstract
-APIE
+A - Abstraction
+P - Polymorphism
+I - Inheritance
+E - Enum
 huge change after java 8
 java 俾工具你
 parent class 開 array 可以開 child class array
 Example: Animal.class, Shape1.class
 enum, Example: Direction, Currency, OrderStatus
 generics
+
+Week 5
+Chapter 26 - Exception
+    Checked exceptions are exceptions that java complier requires us to handle
+    eg. divide 0 / null pointer
+    

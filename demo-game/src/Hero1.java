@@ -23,6 +23,7 @@ public abstract class Hero1 {
     private long id;
     private String name;
     private Role1 role;
+    
 
 
      public Hero1(long id, String name, Role1 role) {
@@ -97,6 +98,22 @@ public abstract class Hero1 {
         Archer1 hero3  = new Archer1(00003L, "Add oil", Role1.Archer);
         Warrior1 hero4   = new Warrior1(00004L, "Brave", Role1.Warrior);
 
+        Warrior1 hero5 = Builder.builder()
+                                 .name("Professor X")
+                                 .id(00005L)
+                                 .role(Role1.Warrior)
+                                 .buildWarrior1();
+
+       Mage1 hero6 = Builder.builder()
+                              .name("Dark Magic")
+                              .id(00006L)
+                              .role(Role1.Mage)
+                              .buildMage1();
+
+
+         System.out.println("Name of hero5 " + hero5.getName() + ", " + "Level: " + hero5.getLevel());
+         System.out.println("Name of hero6 " + hero6.getName() + ", " + "Level: " + hero6.getLevel());
+
         System.out.println(hero1);
 
         hero1.levelUp();
@@ -110,12 +127,13 @@ public abstract class Hero1 {
 
         //System.out.println(Heros1.WAR_VAL[3][4]);
 
-        List<Hero1> heros = new ArrayList<>();
-        //heros[0] store an object reference
-        heros.add(hero1);
-        heros.add(hero2);
-        heros.add(hero3);
-        heros.add(hero3);
+        //a list to collect all the heros
+         
+      //   heros[0] store an object reference
+      //   heros.add(hero1);
+      //   heros.add(hero2);
+      //   heros.add(hero3);
+      //   heros.add(hero3);
 
 
         //test change name

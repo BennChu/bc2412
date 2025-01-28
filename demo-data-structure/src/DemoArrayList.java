@@ -11,6 +11,7 @@ public class DemoArrayList {
         String[] ss = new String[3];
         String[] ss2 = new String[] {"abc", "ijk", "xyz"};
         
+
         //ss is an address of the array, ss2[0]
         System.out.println(ss2[1]);//ijk, read the ijk position directly
 
@@ -23,6 +24,7 @@ public class DemoArrayList {
         System.out.println(strings.add("IJK"));//index = 1, size = 2
                                                //.add() 到 return true
 
+
         //initial capacity of 2. 
         //This means that the internal array has space for 2 elements before it needs to be resized
         ArrayList<String> strings1 = new ArrayList<>(2);//lenght is 2, index 0 & 1
@@ -32,26 +34,32 @@ public class DemoArrayList {
         System.out.println(strings1);//[ABC, CDE, EFG]
         System.out.println(strings1.size());//3
         
+
         //the actual coding is like this
         strings.add(2, "XYZ"); //2 is index, "XYZ" is strings, size = 3
         System.out.println(strings.get(2));//XYZ
         
+
         strings.add(2, "VBN");//add "VBN" to index 2, add at specified index
                               //before index 2 is XYZ, now index 2 is VBN
                               //index 3 is XYZ, 
                               //the rest of the elements are shifted
         
+
         System.out.println(strings);//[ABC, IJK, VBN, XYZ]
         System.out.println(strings.size());//4, ArrayList length is 4
         
+
         //set() is replace
         System.out.println(strings.get(1));//IJK
         strings.set(1,"ZZZ");
         System.out.println(strings.get(1));//ZZZ
 
+
         //indexOf(), lastIndexOf()
         System.out.println(strings.indexOf("VBN"));//2, return the index of the first occurance of the element in the list, return -1 if not found
         System.out.println(strings.lastIndexOf("ABC"));//return the index of last occurance of the element in the list, -1 of not found
+
 
         ArrayList<Book> books = new ArrayList<>();
         books.add(new Book("ABC"));//
@@ -61,6 +69,7 @@ public class DemoArrayList {
         System.out.println(books.remove(0));//remove book by index, need to check index
                                             //remove() return Book type
                                             //return Book[name = ABC]
+                                            
         System.out.println("size" + books.size());//0
         System.out.println("is empty " + books.isEmpty());//true, but books still exit
         //System.out.println(books.get(0));//list is emtpy Index 0 out of bounds for length 0

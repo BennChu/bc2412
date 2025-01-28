@@ -8,9 +8,8 @@ public class App {
                              //check q is it 0
         }
             
-                           
-        
-        //如果 if 能 handld 就用 if
+
+        //如果用 if 可以 handle 就用 if
         //Handle Exception
         try {
             int a = 10 /q;
@@ -20,14 +19,10 @@ public class App {
 
 
 
-
-
-
-
-
         //nullpointer exception (NPE)
         String result = null;
         //System.out.println(s.charAt(0));
+
 
         // try{
         //     result = concat(null, "abc");//method caller
@@ -37,9 +32,10 @@ public class App {
         //     System.out.println("Ignore the bomb.");
         // }
 
+
         //try & catch
         try {
-            result = concat("hello", "abc");//method caller
+            result = concat("hello", "abc");//method "caller"
         } catch (IllegalArgumentException e) { //catch class
             System.out.println("Ignore the bomb.");
         }
