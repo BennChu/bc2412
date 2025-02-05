@@ -1,3 +1,6 @@
+import java.util.Arrays;
+import java.util.List;
+
 public class Card {
 
       //static: shared values
@@ -20,23 +23,25 @@ public class Card {
     //string (more than one char) vs char (single character)
     //char use ==, no space
     //A to K
-    private char rank;
+    private Rank rank;
     private char suite;
   
     //constructor
-    public Card(char rank, char suite) {
+    public Card(Rank rank, char suite) {
         this.rank = rank;
         this.suite = suite;
     }
 
     //getters
-    public char getRank() {
+    public Rank getRank() {
         return this.rank;
     }
 
     public char getSuite() {
         return this.suite;
     }
+
+   
 
 
 }

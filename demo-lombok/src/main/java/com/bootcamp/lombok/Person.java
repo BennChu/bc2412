@@ -10,7 +10,7 @@ import lombok.Setter;
 import lombok.ToString;
 
 //JDK Java Development Kit = Dev Library/Tool (javac) + JRE + JVM
-//Dev Lib -> eg javac, class Library (BigDecimal:java.math), StringBuilder(java.lang)
+//Dev Lib -> eg javac, class Library (BigDecimal:java.math), StringBuilder(java.lang), java.lang is auto import
 //1. some of the Library auto-imported by Java Project (ie java.lang)
 //2. but some of them have to be manually import (ie. BigDecimal)
 //3. Maven: download external (outside JDK) library from maven public (i.e. lombok framework)

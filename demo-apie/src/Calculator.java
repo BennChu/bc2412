@@ -8,6 +8,8 @@ public class Calculator {
         this.y = y;
     }
 
+    //static polymorphism
+    //during compile time, java check the method call by method signature
     public int sum() {
         return this.x + this.y;
     }
@@ -26,8 +28,7 @@ public class Calculator {
         System.out.println(c1.sum(8));//15
         System.out.println(c1.sum(9.0));
         
-        //static polymorphism
-        //during compile time, java check the method call by method signature
+        
     }
 
 }

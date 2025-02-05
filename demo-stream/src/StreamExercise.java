@@ -239,12 +239,14 @@ public class StreamExercise {
     // Output: [100, 64, 36, 16, 4]
 
     List<Integer> newNumbers = numbers.stream()
+                                        //filter() functional interface Predicate that takes an Integer as input and returns a boolean
                                         .filter(e -> e % 2 == 0)
-                                        .map(e -> e * e)//use Math.pow is return double, 唔好煩
-                                                        //map(), the result is a new stream
+                                        .map(e -> e * e)
+                                        //use Math.pow is return double, 唔好煩
+                                        //map(), the result is a new stream
                                         .sorted((e1, e2) -> e1 > e2 ? -1 : 1 )
                                         //.sorted(Comparator.reverseOrder()) 
-                                        //好用既 method 可以做 static 成日 call 佢
+                                        //好用既 method 可以做 static 成日 call 佢, static method belongs to a class
                                         .collect(Collectors.toList());
 
     System.out.println(newNumbers);//
@@ -994,7 +996,7 @@ public class StreamExercise {
     // Output: 28
 
     int totalNumber = keywords.stream()
-                              .mapToInt(e -> e.length())
+                              .mapToInt(e -> e.length())//stream 冇 sum, IntStream has sum, avg, max, min
                               .sum();
     System.out.println(totalNumber);//28
                     

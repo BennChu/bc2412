@@ -34,9 +34,9 @@ public class Librarian {
             books[i] = this.library.getBooks()[i];
         }
 
-        /* 將新書放係書庫最後位 */
+        //將新書放係書庫最後位
         books[books.length - 1] = book;
-        /* setBooks() 係將新書庫放係 library 的書庫 */
+        //setBooks() 係將新書庫放係 library 的書庫
         this.library.setBooks(books);
     }
 

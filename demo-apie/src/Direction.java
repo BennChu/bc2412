@@ -48,6 +48,6 @@ public enum Direction {
 
         System.out.println(Direction.EAST.getAngle());//90
 
-        System.out.println(Direction.EAST.opposite());//90
+        System.out.println(Direction.EAST.opposite());//WEST
     }
 }

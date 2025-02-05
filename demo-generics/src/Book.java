@@ -20,13 +20,14 @@ public class Book {
     public boolean equals(Object obj) {
         if (this == obj)
             return true;
+
         if (!(obj instanceof Book))
             return false;
         
         Book book = (Book) obj;
         return Objects.equals(this.name, book.getName());
     }
-
+    
     @Override
     public int hashCode() {
         return Objects.hash(this.name);

@@ -24,19 +24,26 @@ public class DemoArray {
         //for loop to read array values, array length 係冇 (), 長度係 3
         // i = 0 , 1 , 2
         for (int i = 0; i < arr.length; i++) {  
+            System.out.println(arr[i]);//3, 10, 11
+        }
 
-            System.out.println(arr[i]);
+        //if we use for each loop
+        for (int i : arr) {
+            System.out.println(i);//3, 10, 11
         }
 
 
         //example, use array, print all values, which >= 10
         for (int i = 0; i < arr.length; i++) {
-
             if (arr[i] >= 10) {
-
-                System.out.println(arr[i]);
-
+                System.out.println(arr[i]);//10, 11
             }
+        }
+
+        //for each loop
+        for (int i : arr) {
+            if (i>=10)
+                System.out.println(i);//10, 11
         }
 
 
@@ -58,10 +65,10 @@ public class DemoArray {
         //
         double sum = 0;
         for (int i = 0; i < arr.length; i++) {
-
             sum = sum + arr2[i];
         }
         System.out.println(sum);
+
 
 
         // "abc", "asdflkajsdfl", "alsdjlkjdflknlkenlk", 'abcdladsjfd", " "
@@ -111,7 +118,7 @@ public class DemoArray {
         for (int i = 0; i < arr4.length; i++) {
             //char value -> int variable (upcasting)
             arr5[i] = arr4[i]; 
-            System.out.println(arr5[i]);
+            System.out.println(arr5[i]);//98 b, 99 c, 97 a
         }
 
 
@@ -255,16 +262,21 @@ public class DemoArray {
 
         //valueOf 將 123 變 string 形態
         //String is a class, has method
-        String s = String.valueOf(123); 
-        System.out.println(s);
+        String s = String.valueOf(123);//int form to String form
+        System.out.println(s);//123
         s = String.valueOf(true);
-        System.out.println(s);
+        System.out.println(s);//true
+
+        String s1 = Integer.toString(123);
+        System.out.println(s1);//123
+
+        //below has a method String.valueOf(char, offset, count);
 
         //Integer is a class, has method
         //no new, is not creating an object
         //string type turn value int form
         Integer i1 = Integer.valueOf("123"); 
-        System.out.println(i1 + "int type");
+        System.out.println(i1 + " int type");
 
         //testing
         x=0;
@@ -288,6 +300,8 @@ public class DemoArray {
         System.out.println(chArr[1]);
         System.out.println(chArr[2]);
         System.out.println(chArr[3]);
+
+        System.out.println("String.valueOf " + String.valueOf(chArr, 1, 2));//el
 
         //olleh
         //swaping
@@ -416,10 +430,7 @@ public class DemoArray {
                     arr20[j] = arr20[j + 1];
                     arr20[j + 1] = temp;
                     }
-        
-    
                 }
-    
             }
             System.out.println(Arrays.toString(arr20)); //print array
     }

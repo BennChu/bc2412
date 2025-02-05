@@ -35,12 +35,16 @@ public class Student2 {
         //like customer add item
         Candy2[] candies = new Candy2[this.candies.length+1];
 
-        for( int i = 0 ; i < this.candies.length ; i++ ) {
+        //將舊 candy 係舊 this.candies[], 放去新 candies[]
+        //因為 array[] 係 fixed length
+        for (int i = 0 ; i < this.candies.length ; i++) {
             candies[i] = this.candies[i];
         }
-        //place the candy at the tail
+        //place the new candy at the 新 candies[] tail
         candies[candies.length-1] = candy;
-        //replace the reference
+
+        //replace candies object reference
+        //因為當我地 construct this.candies 係指住 new Candy2[0]
         this.candies = candies;
     }
 

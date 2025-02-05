@@ -11,13 +11,14 @@ public class .....{
 
 - operator (++x, x++)
   - Division ( divided by 0)
-  - Math 
-- comparison (> < == != >=)
+  - Math (%, ++x, x++, etc)
+  - comparison (>, <, ==, !=, >=)
 - String (store zero or many characters)
-  - equals() put string inside bracket, length(), charAt() put beg index end index-1
+  - equals(String), length(), charAt() put beg index end index-1
 - If else
 - for( i=0 ; i<3 ; i++){}
 - for + if (loop all elements + filtering)
+  - searching (for + if)
 
 
 ## Week 2
@@ -27,9 +28,10 @@ public class .....{
  - 8 wrapper classes 對應 8 primitives
  - string methods, example: DemoString
  - Methods (Similar to formula)
- - Method type
- - Method name
- - Method signature = input params + method name
+  - input paramethers
+  - Method type
+  - Method name
+  - Method signature = input params + method name
  - BigDecimal (class) for calculation
 
 
@@ -38,9 +40,17 @@ public class .....{
    Example: Human (bmi)
    Static Variable Example: Supermarket & Worker , Supermarket2 & Worker2
    Static Method Example: Circle, LoanCalculator
+
+
  ## Week 4
-   Class & Object Example: Deck & Card Example: Library, Book & Librarian
-   Static Variable Example: Candy & Student
+ APIE
+    Abstraction (Interface)
+    Polymorphism (static & dynamic)
+    Inheritance (Parent class & Abstract Class)
+    Encapsulation
+Class & Object Example: 
+    Deck & Card Example: Library, Book & Librarian
+Static Variable Example: Candy & Student
 
   extends
   override
@@ -68,8 +78,33 @@ Example: Animal.class, Shape1.class
 enum, Example: Direction, Currency, OrderStatus
 generics
 
+
 Week 5
+Data Structures
+    ArrayList, HashSet, LinkedList (Node)
+    HashMap, ArrayDeque, PrirityQueue
+    List, Map, Queue, Deque
+Understand the underlying DS difference between     ArrayList & LinkedList Class Exercise: ArrayListExercise.java Class Exercise: StockPriceTracker.java Class Exercise: RealStockPriceTracker.java
+Collections.sort(), Comparable & Comparator
+Generic
+
+
+
+## Week 6
 Chapter 26 - Exception
     Checked exceptions are exceptions that java complier requires us to handle
     eg. divide 0 / null pointer
+    Exception.class & RuntimeException.class
+    Exception Handling: try, catch, finally & throws
+    throw for Exception Object
+    throws for method signature
+
+
+## Week 7
+
+
+## Week 8
     
+
+
+

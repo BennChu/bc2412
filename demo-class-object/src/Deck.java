@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.List;
 
 public class Deck {
 
@@ -42,17 +43,16 @@ public class Deck {
         //唔會 create object array
         //object 係可以, 但用左資源
         //for each loop
-        for( char rank : Card.RANK ) {
-            for( char suite : Card.SUITES ) {
+        for (char rank : Card.RANK) {
+            for (char suite : Card.SUITES) {
                 this.cards[idx++] = new Card(rank, suite);
-                
             }
         }
-
-
     }
 
-
+    public List<Card> getCards() {
+        return Arrays.asList(this.cards);
+    }
 
 
 

@@ -1,3 +1,5 @@
+import Animal1.Color;
+
 public class Ball {
 
     private Color color;//has a enum Color, color type
@@ -15,6 +17,7 @@ public class Ball {
         Ball b1 = new Ball(Color.RED);
         //Ball b2 = new Ball(Color.RED);
 
+        //enum Color.RED 係唯一
         System.out.println(b1.getColor() == Color.RED);//true, 唔使次次都 new 一個 RED
     }
 }

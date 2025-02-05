@@ -34,24 +34,25 @@ public class Teacher {
                if (shouldDistribute (student.getScore(), this.candies[pos].getColor())) {
                    student.receiveCandy(this.candies[pos]);
                    this.clearCandy(pos);
-                   if( ++pos >= this.candies.length )
-                   return;
-
+                      if (++pos >= this.candies.length)
+                        return;
                }
-           
            }
        }
-        
     }
     
 
     public static void main(String[] args) {
 
         Candy2[] candies = new Candy2[] {new Candy2('R'), new Candy2('R'),
-                                        new Candy2('R'), new Candy2('Y'), new Candy2('B'), new Candy2('R'),
-                                        new Candy2('Y'), new Candy2('R'), new Candy2('R'), new Candy2('R'),
-                                        new Candy2('R'), new Candy2('B'), new Candy2('B'), new Candy2('R'),
-                                        new Candy2('Y'), new Candy2('Y'), new Candy2('R'), new Candy2('R'),
+                                        new Candy2('R'), new Candy2('Y'),
+                                        new Candy2('B'), new Candy2('R'),
+                                        new Candy2('Y'), new Candy2('R'),
+                                        new Candy2('R'), new Candy2('R'),
+                                        new Candy2('R'), new Candy2('B'),
+                                        new Candy2('B'), new Candy2('R'),
+                                        new Candy2('Y'), new Candy2('Y'),
+                                        new Candy2('R'), new Candy2('R'),
                                         new Candy2('R'), new Candy2('B')};
 
       Student2[] students = new Student2[] {new Student2(1L, 67),
@@ -70,9 +71,5 @@ public class Teacher {
             System.out.println(
                 "Student " + student.getId() + "-" + student.getCandiesInfo());
         }
-
-
-
-
     }
 }

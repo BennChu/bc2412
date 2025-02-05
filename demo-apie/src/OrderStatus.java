@@ -8,6 +8,7 @@ public enum OrderStatus {
 
     private final int value;
 
+    //private constructor, not for people to use
     private OrderStatus (int value) {
         this.value = value;
     }
@@ -21,10 +22,14 @@ public enum OrderStatus {
     //DELIVERED.next() -> null
     public OrderStatus next() {
         for (OrderStatus orderStatus : values()) { //values() is a key word, 係another class, need to write OrderSatus.values
-            if (orderStatus.value == this.value + 1) {//冇寫 getValue(), 可以用 this.value
+            //values() is a method that is automatically generated for enum types. 
+            //This method returns an array of all the constants defined in the enum
+            // in the order they are declared
+            if (orderStatus.value == this.value + 1) {//冇寫 getValue(), 可以用 this.value, this.value 係 READY_FOR_SHIP 既 value
                 return orderStatus;
             }
         }
+        return null;//因為else出左黎都要 return
     }
 
 

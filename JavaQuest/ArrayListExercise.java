@@ -18,9 +18,11 @@ public class ArrayListExercise {
         // 1d. Remove the number 30 from the list.
         // 1e. Print the size of the list.
     
+        //Use List
+        //List<Integer> arrList = new ArrayList<>();
         ArrayList<Integer> arrList = new ArrayList<>();
 
-        arrList.add(10);//index 0
+        arrList.add(10);//index 0, add() return boolean
         arrList.add(20);//index 1
         arrList.add(30);//index 2
         arrList.add(40);//index 3
@@ -28,13 +30,23 @@ public class ArrayListExercise {
 
         System.out.println(arrList);//因為 arrList 裹面係 value, 所以可以就咁 print
 
+        
         for (int i = 0 ; i < arrList.size() ; i++ ) {
             if (arrList.get(i) == 30) {
                 arrList.remove(i);
             }
         }
 
-        //arrList.remove(2);//remove by index
+        //remove all occurrences of the integer 30
+        //remove by Collection interface, return boolean, false
+        System.out.println(arrList.removeAll(Arrays.asList(30)));
+        
+        //remove by index, remove() return Integer, 40
+        System.out.println(arrList.remove(2));
+
+        //ensure remove an Object not index, remove() return boolean, false
+        System.out.println(arrList.remove(Integer.valueOf(30)));
+        
 
         System.out.println(arrList.size());//5
 
@@ -53,6 +65,8 @@ public class ArrayListExercise {
         // 2d. Update "Mango" to "Peach".
         // 2e. Print the final list.
     
+        //Use List
+        //List<String> fruits = new ArrayList<>()
         ArrayList<String> fruits = new ArrayList<>(Arrays.asList("Apple", "Banana", "Mango", "Orange"));
 
         // fruits.add("Apple");
@@ -60,6 +74,11 @@ public class ArrayListExercise {
         // fruits.add("Mango");
         // fruits.add("Orange");
 
+        //contains() need to pass Object o
+        //if pass primitive, need Wrapper class Integer.valueOf(40)
+        boolean hasGrapes = fruits.contains("Grapes");
+        //if (!hasGrapes)
+        //  fruits.add("Grapes");
         boolean found = false;
         for (String fruit : fruits) {       // (裹面係乜野 type : loop 乜野)
             if (fruit.equals("Grapes")) {
@@ -67,6 +86,7 @@ public class ArrayListExercise {
                 break;
             }
          }
+         //
         if (found)
             System.out.println("Found grapes");
         else {
@@ -76,6 +96,7 @@ public class ArrayListExercise {
         //System.out.println("Old list " + fruits);
 
 
+        //fruits.replaceAll(fruit -> "Mango".equals(fruit) ? "Peach" : fruit);
         String s = "Mango";
         String s1 = "Peach";
         int idx;
@@ -150,8 +171,10 @@ public class ArrayListExercise {
         // 5c. Remove the number 2.2 from the set.
         // 5d. Print the size of the set.
     
+        //Set<Double> .......= new HashSet<>
         HashSet<Double> nums1 = new HashSet<>(Arrays.asList(1.1, 2.2, 3.3, 4.4, 5.5));//?? Float cannot??
 
+        //nums1.contains(3.3);//return boolean
         found = false;
         for (Double num : nums1) {
             if (num == 3.3) {
@@ -166,7 +189,7 @@ public class ArrayListExercise {
 
         System.out.println(nums1.size());
 
-
+        nums1.removeAll(Arrays.asList(2.2));
         //nums1.remove(2.2);//remove() method 放 value
         found = false;
         for (Double num : nums1) {
@@ -231,6 +254,7 @@ public class ArrayListExercise {
         HashSet<String> arr1 = new HashSet<>(Arrays.asList("Cherry", "Steve", "Chole", "Jenny", "Vicky"));
         System.out.println(arr1);
 
+        //List<String> arr2 = new ArrayList<>(arr1);
         ArrayList<String> arr2 = new ArrayList<>();
 
         for (String s2 : arr1) {//loop arr1 放落 arr2 度

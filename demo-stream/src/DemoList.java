@@ -19,10 +19,10 @@ public class DemoList {
         strings1.add("DEF");
         System.out.println(strings1);//[ABC, DEF]
 
-
+        //因為 new ArrayList 有個 constructor, 將 Arrays.asList 放落 ArrayList
         List<String> strings2 = new ArrayList<>(Arrays.asList("ABC", "DEF"));
         System.out.println(strings2.get(0));//ABC
-        strings2.add("IJK");//return true
+        strings2.add("IJK");//return true, boolean
         strings2.add("");
         strings2.add(null);
         if (strings2.remove("DEF")) {//remove the frist occurrence, return true
